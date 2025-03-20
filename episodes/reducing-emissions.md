@@ -1,7 +1,7 @@
 ---
 title: Reducing Emissions
-teaching: 20
-exercises: 0
+teaching: 30
+exercises: 5
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -50,13 +50,32 @@ To balance those residual emissions, we need to look at other mechanisms such as
 
 ## Exercise: Strategies for abatement
 
-Abatement is the critical component of carbon emissions reduction strategies. While there are different ways in which an HPC service as a whole may implement abatement, can you think of actions that individual users could take to implement abatement in their use of HPC systems?
+Abatement is the critical component of carbon emissions reduction strategies. Pick one of the questions below (the one that is most relevant for your role) and write down some answers:
+
+- Can you think of actions that individual users/researchers could take to implement abatement in their use of HPC systems?
+- Can you think of actions that a service operator could take to implement abatement in the operation of HPC systems?
+- Can you think of actions that a organisation procuring HPC systems could take to implement abatement when buying HPC systems?
 
 :::::::::::::::  solution
 
 ## Solution
 
-- TBC
+- Individual users:
+  - Run fewer jobs!
+  - Reduce wasted resources by having less job failures
+  - Run on systems that minimise emissions (spatial shifting)
+  - Run when emissions from electricity are lower (temporal shifting)
+
+- Service operators:
+  - Build scheduler policies to eliminate emissions
+  - Provide tools and information that allow users to quantify their emissions and measure reductions
+  - Provide training on carbon emissions and abatement strategies
+
+- Service procurement:
+  - Purchase the minimum amount of hardware possible for the service
+  - Build scoring on amount of embodied and operational emissions into procurement process
+  - Site HPC systems at locations that have low carbon intensities
+  - Run services for as long as possible
 
 :::::::::::::::::::::::::
 
@@ -207,8 +226,6 @@ One example of a behavior change is shifting compute to a time when more renewab
 
 ![Temporal shifting along with matching strategy](./fig/31_carbon_awareness.png "Temporal shifting along with matching strategy")
 
-<!-- How does this work with the 100% renewable energy that ARCHER2 has purchased? What is the granularity? -->
-
 ## How can the HPC-CI rate be reduced?
 
 We have mentioned above how the HPC-CI metric is designed to drive abatement of emissions but how can users of HPC systems, operators of HPC systems and organisations that procure HPC systems actually improve the HPC-CI metric? We try to answer this question in this section but it is worth nothing that action is required by all of these parties to reduce emissions from HPC systems.
@@ -235,7 +252,7 @@ Before we delve into different approaches for different components of the HPC-CI
 - Carefully test input files and job scripts with small/short jobs before running at large scale to reduce the likelihood of wasted emissions.
 - Consider if you can achieve the same project goals with fewer jobs/calculations. For example, optimise the sampling choices when exploring parameter spaces.
 
-Other strategies for improving the HPC-CI metric and, so, reducing emissions do depend on whether the dominant component is operational emissions (i.e. emissions from energy use) or the embodied emissions. If the components are evenly balanced then you should look at options from both sections.
+Other strategies for improving the HPC-CI metric and, so, reducing emissions depend on whether the dominant component is operational emissions (i.e. emissions from energy use) or the embodied emissions. If the components are evenly balanced then you should look at options from both sections.
 
 **Operational emissions dominate:**
 
