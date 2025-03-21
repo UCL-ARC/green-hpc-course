@@ -230,9 +230,9 @@ As green users of HPC, we would consider cancelling or reducing the power intens
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Exercise: Demand shaping in HPC
+## Exercise: Demand shaping and temporal shifting in HPC
 
-A typical HPC system has a wide variety of jobs to schedule and different HPC systems have different scheduling and charging policies for jobs that run on them. Write down some ideas on how you could potentially modify the scheduling and charging of jobs to enable demand shaping on an HPC system?
+A typical HPC system has a wide variety of jobs to schedule and different HPC systems have different scheduling and charging policies for jobs that run on them. Write down some ideas on how you could potentially modify the scheduling and charging of jobs to enable demand shaping and/or temporal shifting on an HPC system?
 
 :::::::::::::::  solution
 
