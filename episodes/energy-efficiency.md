@@ -27,14 +27,6 @@ Energy is the ability to do work. There are many different forms of energy, such
 
 All software, from large scale modelling and simulation on HPC, to the training of Machine Learning models, to the applications running on mobile phones consumes electricity. One of the best ways to reduce electricity consumption and the subsequent carbon emissions made by software is to make make our use of HPC facilities more energy efficient.
 
-:::::::::::::::::::::::::::::::::::::::: callout
-
-## Do renewable energy sources have zero carbon emissions?
-
-The use of low-carbon sources of electricity such as wind or hydroelectric also reduce the emissions from the electricity we consume by our use of HPC. However, even renewable electricity sources have a carbon cost from the manufacture, operation and decommissioning of the energy source (e.g. wind farm) so there are always reductions in emissions to be gained from reducing energy use. We will talk about how you estimate the impact of different emissions sources, including electricity use, later in this workshop so you can prioritise your effort where it will have the most impact.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
 The reduction of energy consumed by work on an HPC system depends on a lot of things, including:
 
 - the design and algorithm choices of the software engineers who wrote the software;
@@ -88,6 +80,14 @@ Clean energy comes from renewable, zero-emission sources that do not pollute the
 - **Clean energy** - does not produce carbon emissions e.g. nuclear.
 - **Green energy** - sources from nature
 - **Renewable energy** - sources will not expire e.g. solar, wind
+
+:::::::::::::::::::::::::::::::::::::::: callout
+
+## Do renewable energy sources have zero carbon emissions?
+
+The use of low-carbon sources of electricity such as wind or hydroelectric also reduce the emissions from the electricity we consume by our use of HPC. However, even renewable electricity sources have a carbon cost from the manufacture, operation and decommissioning of the energy source (e.g. wind farm) so there are always reductions in emissions to be gained from reducing energy use. We will talk about how you estimate the impact of different emissions sources, including electricity use, later in this workshop so you can prioritise your effort where it will have the most impact.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Energy measurement
 
@@ -151,8 +151,6 @@ HPC systems are usually not configured for aggressive or even minimal power savi
 Given this complexity, what practical steps can you take to decide on how to run in an energy-efficient manner on HPC systems? The answer is to run some test cases and measure the energy consumption and performance, then change parameters (such as processor power cap, or number of parallel processes) and measure again to see what the impact is on both performance and energy consumption. Using a benchmarking approach such as this, you can practically improve the energy efficiency of your use of HPC.
 
 If you happen to be a developer of the software you are using then you may also be able to change the algorithms, data layout and other aspects of the software to improve energy efficiency. Such approaches are beyond the scope of this workshop but benchmarking energy consumption also form a core component of this work.
-
-<!-- TODO: add note on including energy efficiency metrics in procurment benchmarks -->
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
