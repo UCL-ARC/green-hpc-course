@@ -53,7 +53,7 @@ Carbon intensity varies by location since some regions have an energy mix contai
 | Low | N. Scotland, S. Scotland, N.E. England, N.W. England | 22 - 48 |
 | Low Medium | N. Wales | 77 |
 | Medium | E. England, London, W. Midlands, S.E. England, Yorkshire | 108 - 135 |
-| High Medium | S. England | 186 - 203 |
+| High Medium | S. England, E. Midlands | 186 - 203 |
 | High | S.W. England, S. Wales, | 242 - 255 |
 
 Similarly, this table compares values across the world in 2023 (ref: [Our World In Data](https://ourworldindata.org/grapher/carbon-intensity-electricity?tab=table)):
@@ -76,13 +76,29 @@ Carbon intensity also changes over time due to the inherent variability of renew
 
 ## Exercise: Carbon emissions from HPC systems
 
-One estimate of the power draw of ARCHER2 is 2.6 MW. Mean carbon intensities from different UK regions in 2024 give low emissions regions as 26 gCO<sub>2</sub>e/kWh, medium emissions regions as 140 gCO<sub>2</sub>e/kWh and high emissions regions as 280 gCO<sub>2</sub>e/kWh. What would the carbon emissions be from 1 year of ARCHER2 operations in the three different emissions regimes?
+One estimate of the power draw of the ARCHER2 HPC system is 3.1 MW (including overheads from the power/cooling plant). Mean carbon intensities from different UK regions in 2024 give low emissions regions as ~30 gCO<sub>2</sub>e/kWh, medium emissions regions as ~120 gCO<sub>2</sub>e/kWh and high emissions regions as ~250 gCO<sub>2</sub>e/kWh. What would the carbon emissions be from electricity user in 1 year of ARCHER2 operations in the three different emissions regimes?
 
 :::::::::::::::  solution
 
 ## Solution
 
-TBC
+First we need to estimate the amount of energy consumed by ARCHER2 in kWh for 1 year from the power draw estimate, this is given by:
+
+```
+3,100 kW x 365 days x 24 hours = 27,156,000 kWh
+```
+
+Now, we can multiply this energy use by the carbon intensity vales to get the estimated emissions from a year of ARCHER2 operation in the three different locations. e.g. for the low emissions location:
+
+```
+27,156,000 kWh x 0.030 kgCO2e/kWh = 815,000 kgCO2e
+```
+
+- Low CI (30 gCO<sub>2</sub>e/kWh) - 815,000 kgCO<sub>2</sub>e
+- Medium CI (120 gCO<sub>2</sub>e/kWh) - 3,260,720.0 kgCO<sub>2</sub>e
+- High CI (250 gCO<sub>2</sub>e/kWh) - 6,790,000.0 kgCO<sub>2</sub>e
+
+Hosting ARCHER2 in a high CI region instead of the low CI region would lead to an additional 5,980,000 kgCO<sub>2</sub>e emissions per year.
 
 :::::::::::::::::::::::::
 
@@ -174,10 +190,6 @@ Spatial shifting means moving your computation to another physical location wher
 
 This requires you to have the ability to run on different HPC resources in different locations - for example, you could chose between running on a local HPC resource or a national HPC resource located elsewhere.
 
-<!-- TODO: Maybe add advantages and disadvantages -->
-
-<!-- TODO: Also mention impact of cooling overheads, different seasons in different hemispheres, cooler locations -->
-
 #### Temporal shifting
 
 If you cannot shift your computation spatially to another region, another option you have is to shift to another time. Perhaps later in the day or night when it's sunnier or windier and, therefore, the carbon intensity is lower. This is called temporal demand shifting. We can predict future carbon intensity reasonably well through advances in weather forecasting.
@@ -229,13 +241,16 @@ A typical HPC system has a wide variety of jobs to schedule and different HPC sy
 - Scheduling based on power intensity
   - Manual: users place jobs into different queues based on predicted power intensity. Charging discounts for users who use this facility
   - Automatic: system detects/predicts power intensity of jobs and schedules accordingly
+
 - Credit based system:
   - Earning and spending periods: during earning period, users earn priority tokens based on how emissions efficient they are (would start with tokens and subtract to stop more tokens for more use). Spend period, users with most tokens get priority on system
-  - See Fugaku approach
+  - This type of approach [has been piloted on the Fugaku HPC system n Japan](https://doi.ieeecomputersociety.org/10.1109/SC41406.2024.00030)
+
+
 - Power capping approaches:
   - System power cap fluctuates with grid carbon intensity
   - Need a tool to distribute power cap amongst jobs
-  - See HPE PowerSched and similar tools
+  - For example [HPEs PowerSched tool](https://cug.org/proceedings/cug2023_proceedings/includes/files/pap113s2-file1.pdf)
 
 :::::::::::::::::::::::::
 

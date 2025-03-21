@@ -81,14 +81,6 @@ Clean energy comes from renewable, zero-emission sources that do not pollute the
 - **Green energy** - sources from nature
 - **Renewable energy** - sources will not expire e.g. solar, wind
 
-:::::::::::::::::::::::::::::::::::::::: callout
-
-## Do renewable energy sources have zero carbon emissions?
-
-The use of low-carbon sources of electricity such as wind or hydroelectric also reduce the emissions from the electricity we consume by our use of HPC. However, even renewable electricity sources have a carbon cost from the manufacture, operation and decommissioning of the energy source (e.g. wind farm) so there are always reductions in emissions to be gained from reducing energy use. We will talk about how you estimate the impact of different emissions sources, including electricity use, later in this workshop so you can prioritise your effort where it will have the most impact.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
 ### Energy measurement
 
 - Energy is measured in joules (J), the [SI](https://en.wikipedia.org/wiki/International_System_of_Units) unit of energy.
