@@ -1,6 +1,6 @@
 ---
 title: Reducing Emissions
-teaching: 30
+teaching: 40
 exercises: 5
 ---
 
