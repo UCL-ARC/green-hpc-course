@@ -6,7 +6,7 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Understand what is meant by "embodied carbon" in the contect of HPC systems
+- Understand what is meant by "embodied carbon" in the context of HPC systems
 - Learn how embodied carbon efficiency can be improved by extending the lifespan of HPC systems and improving performance of applications on HPC systems
 - Appreciate that the balance between embodied and operational carbon emissions on a particular HPC system influences how we go about maximising carbon efficiency
 
@@ -22,17 +22,17 @@ exercises: 0
 
 ## Introduction
 
-The hardware used that makes up the HPC systems you are using is an important element to consider when looking to be greener users of HPC.
+The hardware used that makes up the HPC systems you are using is an important element to consider when looking to be greener users of HPC. Indeed, for HPC systems located where carbon intensity of electricity generation is low, it may be the dominant component of emissions associated with HPC system use.
 
-You will see how embodied carbon is a hidden cost when it comes to hardware and the different measures you can take to reduce the impact that the creation, destruction and running of this hardware involves. For example, extending its lifetime or switching to cloud servers.
+You will see how embodied carbon is a hidden cost when it comes to hardware and the different measures you can take to reduce the impact that the creation, destruction and running of this hardware involves. For example, extending its lifetime and improving the efficiency of your hardware use.
 
 ## Key concepts
 
 ### Embodied carbon
 
-The device you are using to read this on produced carbon when it was manufactured and, once it reaches the end of life, disposing of it may release more. Embodied carbon (also referred to as "embedded carbon") is the amount of carbon pollution emitted during the creation and disposal of a device.
+The device you are using to participate in this workshop produced carbon when it was manufactured and, once it reaches the end of life, disposing of it may release more. Embodied carbon (also referred to as "embedded carbon") is the amount of carbon emissions from the creation and disposal of a device.
 
-When calculating the total carbon pollution for HPC services, both the carbon pollution associated with running the system as well as the embodied carbon of the system must be accounted for.
+When calculating the total carbon emissions for HPC services, both the carbon emissions associated with running the system as well as the embodied carbon of the system must be accounted for.
 
 ![Bar chart illustrating embodied carbon from various end-user devices](./fig/17_embodioed_carbon.png "Bar chart illustrating embodied carbon from various end-user devices")
 
@@ -46,14 +46,16 @@ A way to account for embodied carbon is to amortise the carbon over the expected
 
 ![Diagram illustrating amortisation](./fig/18_amortization.png "Diagram illustrating amortisation")
 
+Rather than years, we typically amortise the embodied emissions over the total amount of resource available on the HPC system over its lifetime. For example, if the resource use of an HPC system is measured in GPUh then we would amortise the embodied emissions over the total GPUh available on the service over its whole lifetime (to give an emissions rate in kgCO<sub>2</sub>e/GPUh).
+
 ## How to improve hardware efficiency
 
 If we take into account the embodied carbon, it is clear that by the time we come to install an HPC system, it's already emitted a good deal of carbon. Computers also have a limited lifespan, which means they eventually are unable to handle modern workloads, or suffer failures and need to be replaced. In these terms, hardware consumption is a proxy for carbon, and since our goal is to be carbon efficient, we must also be hardware efficient.
 
 There are two main approaches to hardware efficiency:
 
-- **Extending the lifespan** of the hardware - which reduces the carbon emission rate per unit of time due to amortisation.
-- **Increasing the utilisation and performance** of the hardware - getting more useful work out of the hardware per unit of time.
+- **Extending the lifespan** of the hardware - which reduces the carbon emission rate per unit of resource due to amortisation.
+- **Increasing the utilisation and performance** of the hardware - getting more useful work out of the hardware per unit of resource.
 
 ### Extending the lifespan of hardware
 
@@ -73,7 +75,7 @@ Understanding what is the most carbon efficient way to make use of HPC systems (
 
 ### Increasing utilisation and performance
 
-As well as increasing the lifespan to improve the embodied carbon efficiency, we can also get more out of the HPC hardware while we have it.
+As well as increasing the lifespan to improve the embodied carbon efficiency, we can also work to make sure we get the most out of the HPC hardware while we have it.
 
 At a service/system level this often corresponds to maximising the usage of the service - it's better to have 100% utilisation than 20% utilisation because of the cost of embodied carbon (and also because of the fact that even idle components in HPC systems consume some electricity).
 
