@@ -1,7 +1,7 @@
 ---
 title: Carbon Efficiency
 teaching: 20
-exercises: 5
+exercises: 15
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -85,9 +85,38 @@ What do you think the sources of carbon emissions may be from HPC system use? Wr
 
 ## Solution
 
+You may have come up with sources such as:
+
+- Emissions from electricity generation to power the HPC system
+- Embodied emissions from manufacturing the HPC system components such as processors, memory and storage
+- Embodied emissions from constructing the data centre and other infrastructure to house the HPC system
+- Emissions associated with the people working to procure, run and support the HPC system
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Exercise: Positive emissions impacts
+
+Write down the outcomes or activities that you do as part of your research or work that could be produce positive carbon emissions. Once you have them written down, can you rank them in order of what you think the largest source of emissions will be to the smallest? Can you think of any way in which you might go about quantifying this positive impact so it could be included in a carbon audit of your work?
+
+:::::::::::::::  solution
+
+## Solution
+
 You may have come up with outcomes such as:
 
+- The research or work you are engaged in is developing new innovations and technologies to reduce or eliminate emissions
+- The research or work you are engaged in is providing data that is critical to efforts to quantify climate change and/or net zero strategies
+- You are involved in training, education and/or activities raising awareness of carbon emissions and helping others to reduce their emissions
+- You are developing resources and tools that help others to quantify and reduce their emissions
 
+Quantifying positive emissions impacts are often even more difficult than quantifying the emissions we produce through our work but are critical to understanding how we are helping to meet climate commitments (which we will discuss later in this workshop).
+
+For example, attending this workshop may empower you to go away and take some action to reduce the emissions associated with your work. Maybe each person who takes action following this workshop reduces their overall emissions by 2% this year but only 50% of people who come on the workshop manage to have this impact. This means that overall, we would see a 1% reduction in emissions for this year per person attending the workshop. If we assume that the work emissions per person per year are around 6,000 kgCO<sub>2</sub>e then this workshop would be estimated to save 60 kgCO<sub>2</sub>e per person attending the workshop.
 
 :::::::::::::::::::::::::
 
@@ -111,29 +140,11 @@ As well as the research activities on HPC systems leading to reductions in emiss
 - Incorporating environmental and biodiversity improvements into the service. For example, for the ACF data centre that hosts ARCHER2 (which is in a rural location) EPCC have been working to improve the site biodiversity and improve habitats.
 - Responsible carbon offset schemes could also potentially be used to reduce emissions if they are undertaken as part of providing an HPC service.
 
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Exercise: Positive emissions impacts
-
-Write down the outcomes or activities that you do as part of your research or work that could be produce positive carbon emissions. Once you have them written down, can you rank them in order of what you think the largest source of emissions will be to the smallest? Can you think of any way in which you might go about quantifying this positive impact so it could be included in a carbon audit of your work?
-
-:::::::::::::::  solution
-
-## Solution
-
-You may have come up with outcomes such as:
-
-
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Greenhouse gases are a group of gases contributing to global warming. Carbon is often used as a broad term to refer to the impact of all types of emissions and activities on global warming. CO<sub>2</sub>e is a measurement term used to measure this impact.
 - The international community, in groups such as the UNFCCC, has come together to limit the impact of global warming by reducing emissions, aiming for a 'preferable' lower limit of 1.5&deg;C. This was agreed through the UN IPCC in 2015 in the [Paris Climate Agreement](https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement) and is monitored at the regular COP event.
-- Everything we do emits carbon into the atmosphere, and our goal is to emit the least amount of carbon possible. This constitutes the first principle of green software use: **carbon efficiency, emitting the least amount of carbon possible per unit of work**.
+- Everything we do emits carbon into the atmosphere, and our goal is to emit the least amount of carbon possible. This constitutes the first principle of green HPC system use: **carbon efficiency, emitting the least amount of carbon possible per unit of work**.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
