@@ -76,7 +76,7 @@ Use of HPC will be only one part of your research activities and may not even be
 
 ## Exercise: What does your research look like?
 
-Write down the activities that you do as part of your research that could be a source of carbon emissions other than use of HPC. Once you have them written down, can you rank them in order of what you think the largest source of emissions will be to the smallest?
+Write down the activities that you do as part of your work or research that could be a source of carbon emissions other than from HPC systems. Once you have them written down, can you rank them in order of what you think the largest source of emissions will be to the smallest?
 
 :::::::::::::::  solution
 
@@ -85,10 +85,13 @@ Write down the activities that you do as part of your research that could be a s
 You may have come up with activities from the following list:
 
 - Travel to/from place of work
-- Travel to conferences, training and meetings
+- Travel to and accommodation at conferences, training and meetings
 - Use of other computing resources (e.g. laptops/workstations, cloud resources and the internet)
+- Data storage
 - Laboratory work - chemicals, instruments
 - Printed materials - books, journal articles
+
+Ranking them in order is more difficult and will differ from person to person. Typically, any sort of flying to conferences or meetings will be the most carbon intensive activity you can undertake through your work. Whether it is the largest contribution depends on how often you fly. If you work in a laboratory, that may well be the next highest source of emissions though if you commute a long way and use a petrol/diesel car that may also be one of the highest sources of emissions.
 
 :::::::::::::::::::::::::
 
@@ -101,6 +104,7 @@ In fact, **all** activities that we undertake as part of our research produce ca
 - [Transparent reporting of research-related greenhouse gas emissions through the scientific CO<sub>2</sub>nduct initiative](https://www.nature.com/articles/s42005-022-00930-2)
 - [Quantifying the carbon footprint of clinical trials: guidance development and case studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC10823997/)
 - [Emissions measurement and reporting approaches for the public sector (UK Government)](https://assets.publishing.service.gov.uk/media/66fa76de30536cb927482953/emissions-measurement-and-reporting-approaches-for-the-public-sector-report.pdf)
+- [Carbon footprint and mitigation strategies of three chemistry laboratories](https://pubs.rsc.org/en/content/articlehtml/2024/gc/d3gc03668e)
 
 
 <!--  LocalWords:  keypoints links.md endcomment
