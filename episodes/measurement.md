@@ -1,6 +1,6 @@
 ---
 title: Measurement
-teaching: 30
+teaching: 40
 exercises: 20
 ---
 
@@ -174,7 +174,7 @@ As we saw earlier, for the UK, the carbon intensity is dependent on location and
 | Low | N. Scotland, S. Scotland, N.E. England, N.W. England | 22 - 48 |
 | Low Medium | N. Wales | 77 |
 | Medium | E. England, London, W. Midlands, S.E. England, Yorkshire | 108 - 135 |
-| High Medium | S. England | 186 - 203 |
+| High Medium | S. England, E. Midlands | 186 - 203 |
 | High | S.W. England, S. Wales, | 242 - 255 |
 
 ### 3. Determine embodied emissions
@@ -189,8 +189,7 @@ use are captured in the Scope 2 emissions estimates.
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Calculating the embodied emissions can be more difficult than the operational emissions from energy 
-consumption as it can be more difficult to get information on embodied emissions associated with HPC hardware. You
-may, of course, be lucky and the HPC system you are using could already provide estimates of the 
+consumption as it can be more difficult to get information on embodied emissions associated with HPC hardware. You may, of course, be lucky and the HPC system you are using could already provide estimates of the 
 embodied emissions which you can use!
 
 If you need to estimate this yourself, the major contributors to embodied emissions are likely to be:
@@ -231,27 +230,14 @@ change the fraction of emissions attributed to the compute nodes.
 
 ## Other embodied emissions sources
 
-We have not included embodied emissions associated with the data centre buildings and plant in the analysis above.
-[The IRISCAST report](https://doi.org/10.5281/zenodo.7692450) mentioned above provides an evaluation of these values. While the total
-embodied emissions can be high for these items, their long lifespan means that their contribution to the 
-embodied emissions during the lifespan of a particular HPC system are generally much less significant than
-the embodied emissions from the HPC system hardware itself.
+We have not included embodied emissions associated with the data centre buildings and plant in the
+analysis above. [The IRISCAST report](https://doi.org/10.5281/zenodo.7692450) mentioned above provides
+an evaluation of these values. While the total embodied emissions can be high for these items, their
+long lifespan means that their contribution to the embodied emissions during the lifespan of a particular
+HPC system are generally much less significant than the embodied emissions from the HPC system hardware
+itself.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Exercise: Carbon emissions from HPC systems
-
-One estimate of the power draw of ARCHER2 is 2.6 MW. Mean carbon intensities from different UK regions in 2024 give low emissions regions as 26 gCO<sub>2</sub>e/kWh, medium emissions regions as 140 gCO<sub>2</sub>e/kWh and high emissions regions as 280 gCO<sub>2</sub>e/kWh. What would the carbon emissions be from 1 year of ARCHER2 operations in the three different emissions regimes?
-
-:::::::::::::::  solution
-
-## Solution
-
-TBC
-
-:::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::
 
@@ -291,20 +277,31 @@ following amounts of resource over 3 months
 - 1,100 GPUh
 - 3,542,000 kWh
 
-The total embodied emissions for the service are 6,500,000 kgCO2e, the service lifetime 
+The total embodied emissions for the service are 6,500,000 kgCO<sub>2</sub>e, the service lifetime 
 is 7 years and there are 1000 compute nodes each with 8 GPU. The service is hosted in a
 location with a carbon intensity of 40 gCO<sub>2</sub>e/kWh.
 
 1. Compute the scope 2 emissions for the project use
 2. Compute the scope 3 emissions rate in kgCO2e/GPUh
 3. Compute the scope 3 emissions for the project use
-4. Do scope 2 or scope 3 emissions dominate or are they evenly matched?
+4. Compute the total emissions for the project use
+5. Do scope 2 or scope 3 emissions dominate or are they evenly matched?
 
 :::::::::::::::  solution
 
 ## Solution
 
-TBC
+1. The scope 2 emissions from energy use by the project are given by `E * I`, the energy used multiplied by the carbon intensity of the electricity supply. In this case, this is given by `3,542,000 kWh x 0.040 kgCO2e/kWh = 14,170 kgCO2e`.
+
+2. The scope 3 emissions rate per GPUh is the total scope 3 emissions for the service divided by number of GPUh available over the lifetime of the service.
+   1. The total GPUh over the service lifetime is estimated by `7 years x 365 days x 24 hours x 1000 nodes x 8 GPU per node = 490,560,000 GPUh`.
+   2. The scope 3 emissions rate is given by `6,500,000 kgCO2e / 490,560,000 GPUh = 0.013 kgCO2e/GPUh`
+
+3. The scope 3 emissions for the project use is the number of GPUh used multiplied by the scope 3 emissions per GPUh: `1,100 GPUh * 0.013 kgCO2e/GPUh = 14.3 kgCO2e`
+
+4. Total emissions are scope 2 + scope 3 emissions: `14,170 kgCO2e + 14.3 kgCO2e = 14,184 kgCO2e`
+
+5. Scope 2 emissions (from electricity use) heavily dominate the emissions in this example.
 
 :::::::::::::::::::::::::
 
@@ -394,8 +391,8 @@ HPC-CI  = 1500 kgCO2e / 950 ns = 1.58 kgCO2e/ns
 ## Exercise: HPC-CI rate 
 
 In the previous exercise we computed the total HPC system emissions for 3 months of project
-use to be YYYY kgCO2/e. The project was modelling the climate and managed to simulate 3,680 years of Earth's
-climate during that 3 month period using 1,100 GPUh of resource.
+use to be 14,184 kgCO<sub>2</sub>e. The project was modelling the climate and managed to simulate
+3,680 years of Earth's climate during that 3 month period using 1,100 GPUh of resource.
 
 1. What is the HPC-CI in kgCO2e per simulated year?
 2. What is the HPC-CI in kgCO2e per GPUh?
@@ -404,7 +401,9 @@ climate during that 3 month period using 1,100 GPUh of resource.
 
 ## Solution
 
-TBC
+1. Given by: `14,184 kgCO2e / 3,680 simulated years = 3.85 kgCO2e/simulated year`
+
+2. Given by: `14,184 kgCO2e / 1,100 GPUh = 12.89 kgCO2e/GPUh`
 
 :::::::::::::::::::::::::
 
