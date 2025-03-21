@@ -158,13 +158,56 @@ If you happen to be a developer of the software you are using then you may also 
 
 An application (GROMACS) running on ARCHER2 has the following performance characteristics and energy use at different node counts and different CPU frequency settings. What are the most energy efficient combinations in kWh/ns of node count and CPU frequency for these types of calculations, what is the worst and how large is the percentage difference between the best and worst cases? 
 
-|  | | 2.0 GHz |  |  2.25 GHz + boost |  |
-| Node count | ns simulated | Runtime (s) | kWh | Runtime (s) | kWh |
-|---:|---:|---:|---:|---:|---:|
-| 1 | 0.020 | 369 | 0.0464 | 288 | 0.0464 |
-| 2 | 0.020 | 198 | 0.0450 | 156 | 0.0465 |
-| 3 | 0.020 | 155 | 0.0438 | 109 | 0.0465 |
-| 4 | 0.020 | 117 | 0.0471 |  93 | 0.0513 | 
+<table>
+    <tr>
+        <th></th>
+        <th></th>
+        <th>2.0 GHz</th>
+        <th></th>
+        <th>2.25 GHz + boost</th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>Node count</th>
+        <th>ns simulated</th>
+        <th>Runtime (s)</th>
+        <th>kWh</th>
+        <th>Runtime (s)</th>
+        <th>kWh</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>0.020</td>
+        <td>369</td>
+        <td>0.0464</td>
+        <td>288</td>
+        <td>0.0464</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>0.020</td>
+        <td>198</td>
+        <td>0.0450</td>
+        <td>156</td>
+        <td>0.0465</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>0.020</td>
+        <td>155</td>
+        <td>0.0438</td>
+        <td>109</td>
+        <td>0.0465</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>0.020</td>
+        <td>117</td>
+        <td>0.0471</td>
+        <td>93</td>
+        <td>0.0513</td>
+    </tr>
+</table>
 
 :::::::::::::::  solution
 
