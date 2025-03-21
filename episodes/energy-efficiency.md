@@ -215,13 +215,56 @@ An application (GROMACS) running on ARCHER2 has the following performance charac
 
 We can compute the energy efficiency in kWh/ns by dividing the energy used by the number of ns simulated:
 
-|  | | 2.0 GHz |  |  2.25 GHz + boost |  |
-| Node count | ns simulated | Runtime (s) | kWh/ns | Runtime (s) | kWh/ns |
-|---:|---:|---:|---:|---:|---:|
-| 1 | 0.020 | 369 | 2.32 | 288 | 2.32 |
-| 2 | 0.020 | 198 | 2.25 | 156 | 2.32 |
-| 3 | 0.020 | 155 | 2.19 | 109 | 2.32 |
-| 4 | 0.020 | 117 | 2.36 |  93 | 2.56 |
+<table>
+    <tr>
+        <th></th>
+        <th></th>
+        <th>2.0 GHz</th>
+        <th></th>
+        <th>2.25 GHz + boost</th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>Node count</th>
+        <th>ns simulated</th>
+        <th>Runtime (s)</th>
+        <th>kWh/ns</th>
+        <th>Runtime (s)</th>
+        <th>kWh/ns</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>0.020</td>
+        <td>369</td>
+        <td>2.32</td>
+        <td>288</td>
+        <td>2.32</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>0.020</td>
+        <td>198</td>
+        <td>2.25</td>
+        <td>156</td>
+        <td>2.32</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>0.020</td>
+        <td>155</td>
+        <td>2.19</td>
+        <td>109</td>
+        <td>2.32</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>0.020</td>
+        <td>117</td>
+        <td>2.36</td>
+        <td>93</td>
+        <td>2.56</td>
+    </tr>
+</table>
 
 So, the most energy efficient combination is 3 nodes at 2 GHz CPU clock frequency and the worst is 4 nodes with 2.25 GHz + boost CPU clock frequency. The worst case is around 17% less energy efficient than the best case. While this difference may not amount to much energy for a single run, if hundreds or thousands of simulations are run as part of a project this can lead to a significant reduction in consumed energy.
 
