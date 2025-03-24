@@ -14,9 +14,7 @@ We use the [UK National Supercomputing Service, ARCHER2](https://www.archer2.ac.
 example throughout this lesson but the principles and learning should be applicable to 
 any HPC system.
 
-::::::::::::::::::::::::::::::::::::::  objectives
-
-## After completing this lesson you should:
+After completing this lesson you should:
 
 - Be able to understand the concept of carbon efficiency and how it relates to energy efficiency -
   including cases where energy efficiency can be at odds with carbon efficiency
@@ -29,8 +27,6 @@ any HPC system.
   in these frameworks map onto HPC
 - Gain practical advice on how you can measure and improve the carbon efficiency of your use of
   HPC
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 :::::::::::::::::::::::::::::::::::::: callout
