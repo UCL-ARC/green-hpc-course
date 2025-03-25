@@ -29,6 +29,35 @@ After completing this lesson you should:
   HPC
 
 
+## Location and timings
+
+- Date: 1 Apr 2025
+- Time: 10:00-15:30 BST
+- Location: Online
+- Instructor: Andy Turner, EPCC
+
+## Schedule
+
+| Time | Episode |
+|-----:|---------|
+| 10:00 | Introduction |
+| 10:25 | Carbon efficiency |
+| 11:00 | Morning break |
+| 11:15 | Energy efficiency |
+| 11:45 | Carbon awareness |
+| 12:20 | Hardware efficiency |
+| 12:40 | Lunch |
+| 13:25 | Measurement |
+| 14:25 | Afternoon break |
+| 14:40 | Reducing emissions |
+| 15:25 | Next steps |
+| 15:35 | End |
+
+## Registration
+
+- [Registration on ARCHER2 website](https://www.archer2.ac.uk/training/courses/250401-green-computing/)
+
+
 :::::::::::::::::::::::::::::::::::::: callout
 
 This workshop is based on and builds on the material in the [Green Software Practitioner](https://learn.greensoftware.foundation/)
