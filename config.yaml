@@ -35,6 +35,8 @@ branch: 'main'
 # Who to contact if there are any issues
 contact: 'a.turner@epcc.ed.ac.uk'
 
+start_time: 600
+
 # Navigation ------------------------------------------------
 #
 # Use the following menu items to specify the order of
@@ -61,6 +63,7 @@ contact: 'a.turner@epcc.ed.ac.uk'
 episodes: 
 - introduction.md
 - carbon-efficiency.md
+- morning-break.md
 - energy-efficiency.md
 - carbon-awareness.md
 - hardware-efficiency.md
