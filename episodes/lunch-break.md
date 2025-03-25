@@ -1,6 +1,6 @@
 ---
-title: Morning Break
-teaching: 60
+title: Lunch Break
+teaching: 45
 exercises: 0
 ---
 
