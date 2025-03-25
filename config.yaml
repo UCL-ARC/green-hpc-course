@@ -35,7 +35,14 @@ branch: 'main'
 # Who to contact if there are any issues
 contact: 'a.turner@epcc.ed.ac.uk'
 
-start_time: 600
+layout: workshop
+
+startdate: 2025-04-01
+enddate: 2025-04-01
+humandate: 1 Apr 2025
+humantime: 10:00 - 15:30 BST
+instructors: ['Andy Turner']
+emails: ['a.turner@epcc.ed.ac.uk']
 
 # Navigation ------------------------------------------------
 #
