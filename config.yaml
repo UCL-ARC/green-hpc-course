@@ -27,7 +27,7 @@ life_cycle: 'alpha'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries-incubator/green-software-hpc'
+source: 'https://github.com/EPCCed/2025-04-01_GreenHPC_Online'
 
 # Default branch of your lesson
 branch: 'main'
@@ -41,7 +41,6 @@ startdate: 2025-04-01
 enddate: 2025-04-01
 humandate: 1 Apr 2025
 humantime: 10:00 - 15:30 BST
-instructors: ['Andy Turner']
 emails: ['a.turner@epcc.ed.ac.uk']
 
 # Navigation ------------------------------------------------
