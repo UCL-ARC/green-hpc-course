@@ -1,7 +1,7 @@
 ---
 title: Morning Break
 teaching: 30
-exercises:
+exercises: 0
 ---
 
 Refreshments break
