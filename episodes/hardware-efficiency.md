@@ -8,7 +8,6 @@ exercises: 0
 
 - Understand what is meant by "embodied carbon" in the context of HPC systems
 - Learn how embodied carbon efficiency can be improved by extending the lifespan of HPC systems and improving performance of applications on HPC systems
-- Appreciate that the balance between embodied and operational carbon emissions on a particular HPC system influences how we go about maximising carbon efficiency
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -50,9 +49,9 @@ Rather than years, we typically amortise the embodied emissions over the total a
 
 ## How to improve hardware efficiency
 
-If we take into account the embodied carbon, it is clear that by the time we come to install an HPC system, it's already emitted a good deal of carbon. Computers also have a limited lifespan, which means they eventually are unable to handle modern workloads, or suffer failures and need to be replaced. In these terms, hardware consumption is a proxy for carbon, and since our goal is to be carbon efficient, we must also be hardware efficient.
+If we take into account the embodied carbon, it is clear that by the time we come to install an HPC system, it's already emitted a good deal of carbon. Computers also have a limited lifespan, which means they eventually are unable to handle modern workloads, or suffer failures and need to be replaced. In these terms, hardware consumption is a proxy for carbon, and since our goal is to be carbon efficient, we must also be hardware carbon efficient.
 
-There are two main approaches to hardware efficiency:
+There are two main approaches to improving hardware carbon efficiency:
 
 - **Extending the lifespan** of the hardware - which reduces the carbon emission rate per unit of resource due to amortisation.
 - **Increasing the utilisation and performance** of the hardware - getting more useful work out of the hardware per unit of resource.
@@ -64,14 +63,6 @@ In the example we saw previously, if we can add just one more year to the lifesp
 ![Diagram illustrating amortisation](./fig/19_lifespan.png "Diagram illustrating amortisation")
 
 HPC systems have historically had lifetimes of around 5-7 years at which point they are replaced by newer systems that provide improved performance and functionality and that are typically more energy efficient. However, extending the lifetime of HPC systems for longer periods may lead to improved carbon efficiency and using older HPC systems for our research may lead to more carbon efficient use of HPC. 
-
-:::::::::::::::::::::::::::::::::::::::: callout
-
-## Carbon efficiency can be complex - flexibility is key
-
-Understanding what is the most carbon efficient way to make use of HPC systems (and the most carbon efficient way to operate then, including choosing their lifetime) can be complex as it depends on many factors: the embodied carbon of the hardware, the lifetime, the carbon intensity of the electricity supply and how that changes over the service lifetime, how efficiently the workload you are running runs on the type of hardware provided by the system. However, one key aspect of being able to use HPC in a carbon efficient way is for your workflow to have the flexibility to run on different system types in an efficient manner.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Increasing utilisation and performance
 
@@ -87,13 +78,20 @@ For individual users and groups on HPC systems, improving the carbon efficiency 
 
 We will look at a specific example of this balance in a later episode of this workshop.
 
+:::::::::::::::::::::::::::::::::::::::: callout
+
+## Carbon efficiency can be complex - flexibility is key
+
+Understanding what is the most carbon efficient way to make use of HPC systems (and the most carbon efficient way to operate then, including choosing their lifetime) can be complex as it depends on many factors: the embodied carbon of the hardware, the lifetime, the carbon intensity of the electricity supply and how that changes over the service lifetime, how efficiently the workload you are running runs on the type of hardware provided by the system. However, one key aspect of being able to use HPC in a carbon efficient way is for your workflow to have the flexibility to run on different system types in an efficient manner.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Embodied carbon is the amount of carbon pollution emitted during the creation and disposal of an HPC system.
 - When calculating your total carbon pollution, you must consider both that which is emitted when running the on the HPC system as well as the embodied carbon associated with its creation and disposal.
 - Extending the lifetime of an HPC system has the effect of amortising the carbon emitted so that its embodied CO<sub>2</sub>e/year is reduced.
 - Increasing utilisation and performance also improve the embodied carbon efficiency from HPC system use.
-- You need to know what the balance between embodied carbon and operational carbon is on the HPC systems you are using to be able to decide how to maximise your carbon efficiency.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
