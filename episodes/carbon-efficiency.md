@@ -24,7 +24,7 @@ exercises: 15
 
 ## Introduction
 
-Understanding the impact of greenhouse gases on our environment is key to understanding HPC's own carbon footprint. You will learn about the different kinds of greenhouse gases present in the environment, how they are emitted and measured, and what is being done by different organisations around the world to control and reduce these emissions.
+Understanding the impact of greenhouse gases on our environment is key to understanding HPC system's own carbon footprint. You will learn about the different kinds of greenhouse gases present in the environment, how they are emitted and measured, and what is being done by different organisations around the world to control and reduce these emissions.
 
 You will find out about the GHG protocol and what it means for green use of HPC.
 
@@ -73,7 +73,7 @@ We will always emit carbon through our activities, but being carbon efficient me
 
 ## Carbon efficiency in HPC system use
 
-In the HPC space, the part we play in the climate solution is **using HPC systems in a carbon efficient way**. Being carbon efficient is about making sure your use of HPC emits the least carbon possible for the work we are doing. Or, for providers of HPC systems, it means procuring and operating the system in such a way as to minimise the carbon emissions. Ideally, you would also be able to quantify the **positive** carbon impacts from the work (or HPC system itself) to understand the overall net impact on carbon emissions - though doing this is typically quite challenging.
+In the HPC space, the part we play in the climate solution is **using HPC systems in a carbon efficient way**. Being carbon efficient is about making sure your use of HPC systems emits the least carbon possible for the work you are doing. Or, for providers of HPC systems, it means procuring and operating the system in such a way as to minimise the carbon emissions. Ideally, you would also be able to quantify the **positive** carbon impacts from the work (or HPC system itself) to understand the overall net impact on carbon emissions - though doing this is typically quite challenging.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -124,9 +124,9 @@ For example, attending this workshop may empower you to go away and take some ac
 
 ### Positive emissions impacts
 
-As well as reducing emissions from our use of HPC there are typically other sources of positive carbon emissions impact associated with HPC 
+As well as reducing emissions from our use of HPC systems there are typically other sources of positive carbon emissions impact associated with HPC 
 
-The main source of reduced emissions from HPC use is in the research that leads to new technology, policies and approaches to reducing emissions. Some examples include:
+The main source of reduced emissions from HPC system use is in the research that leads to new technology, policies and approaches to reducing emissions. Some examples include:
 
 - HPC services run the climate models that are used to provide evidence for setting emissions reductions policies and targets across the world.
 Research and modelling on HPC services leads to development of improved zero emission energy generation by, for example, modelling new wind turbine and wind farm designs.
