@@ -31,7 +31,7 @@ This workshop will explain all of these concepts, how to apply them to use cases
 
 ## Who is this aimed at?
 
-Anyone involved in using HPC resources - either as a user, a developer of software for use on HPC or even professionals. By studying these principles, you will be able to better understand the effect of their use of HPC on carbon emissions, where it fits with emissions from your other activities and what concrete actions you can take to reduce your emissions and the size of the impact from these reductions.
+Anyone involved in using or delivering HPC resources - a user, a developer of software for use on HPC, an HPC service operator or those involved in procuring HPC systems. By studying these principles, you will be able to better understand the effect of HPC systems on carbon emissions, where it fits with emissions from other activities and what concrete actions that can be taken to reduce emissions and the size of the impact from these reductions.
 
 ## History of green software engineering
 
@@ -48,7 +48,7 @@ In this workshop, we cover the covers 6 key areas of green use of HPC (based on 
 5. **Measurement**: What you can't measure, you can't improve.
 6. **Climate Commitments**: Understand the exact mechanism of carbon reduction.
 
-Each of these episodes will introduce some new concepts and explain in detail why they are important in terms of the climate, and how you can apply them in your work on HPC systems. We will use the [ARCHER2 UK National Supercomputing Serivce](https://www.archer2.ac.uk) to provide concrete examples of how the principles can be applied.
+Each of these episodes will introduce some new concepts and explain in detail why they are important in terms of the climate, and how you can apply them on HPC systems. We will use the [ARCHER2 UK National Supercomputing Serivce](https://www.archer2.ac.uk) to provide concrete examples of how the principles can be applied.
 
 :::::::::::::::::::::::::::::::::::::::: callout
 
@@ -68,13 +68,13 @@ The green software foundation publishes a [catalog of vendor-neutral green softw
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Other research activities
+## Other work activities
 
-Use of HPC will be only one part of your research activities and may not even be the largest source of carbon emissions (though this does not mean you should not work to make your use of HPC more carbon efficient!). As well as understanding your carbon emissions from HPC, which this workshop will help you do, you also need to assess other activities you undertake as part of your research and try to estimate emissions associated with them.
+Use of HPC will be only one part of your activities associated with your work and may not even be the largest source of carbon emissions (though this does not mean you should not work to make your use of HPC more carbon efficient!). As well as understanding carbon emissions from HPC, which this workshop will help you do, you also need to assess other activities you undertake as part of your work and try to estimate emissions associated with them.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Exercise: What does your research look like?
+## Exercise: What does your work look like?
 
 Write down the activities that you do as part of your work or research that could be a source of carbon emissions other than from HPC systems. Once you have them written down, can you rank them in order of what you think the largest source of emissions will be to the smallest?
 
@@ -97,7 +97,7 @@ Ranking them in order is more difficult and will differ from person to person. T
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-In fact, **all** activities that we undertake as part of our research produce carbon emissions. While, in an ideal world, we would be able to reduce emissions from all our activities we have finite time and effort so need to prioritise based on which reduction strategies will have the largest impact. This means that the first step is to estimate the emissions from different activities we are involved in as part of our research, even if the estimate is very rough.
+In fact, **all** activities that we undertake as part of our work (and personal life) produce carbon emissions. While, in an ideal world, we would be able to reduce emissions from all our activities we have finite time and effort so need to prioritise based on which reduction strategies will have the largest impact. This means that the first step is to estimate the emissions from different activities we are involved in as part of our work, even if the estimate is very rough.
 
 - [Travel emissions calculator (Deloitte UK)](https://www.deloitte.com/uk/en/issues/climate/content/travel-emissions-calculator.html)
 - [Emissions from laptops (Circular Computing)](https://circularcomputing.com/news/carbon-footprint-laptop/)
