@@ -14,7 +14,6 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What is *Carbon Intensity*?
 - What are low carbon sources of electricity generation?
 - How do we quantify energy efficiency?
 - What aspects should we consider when looking at energy efficiency of HPC system use?
@@ -25,7 +24,7 @@ exercises: 10
 
 Energy is the ability to do work. There are many different forms of energy, such as heat, electrical and chemical, and one type of energy can be converted to another. For example, we convert chemical energy in coal to electrical energy. In other words, electricity is secondary energy converted from another energy type. In this way, we can think of energy as a measure of the electricity used.
 
-All software, from large scale modelling and simulation on HPC, to the training of Machine Learning models, to the applications running on mobile phones consumes electricity. One of the best ways to reduce electricity consumption and the subsequent carbon emissions made by software is to make make our use of HPC facilities more energy efficient.
+All software, from large scale modelling and simulation on HPC systems, to the training of AI models, to the applications running on mobile phones consumes electricity. One of the best ways to reduce electricity consumption and the subsequent carbon emissions made by software is to make make our use of HPC facilities more energy efficient.
 
 The reduction of energy consumed by work on an HPC system depends on a lot of things, including:
 
