@@ -30,9 +30,9 @@ Carbon awareness is the idea of doing more when more energy comes from low carbo
 
 ### Carbon intensity
 
-Carbon intensity measures how much carbon (CO<sub>2</sub>e) is emitted per kilowatt-hour (kWh) of electricity consumed. The standard unit of carbon intensity is gCO<sub>2</sub>e/kWh, or grams of carbon per kilowatt hour.
+*Carbon Intensity (CI)* measures how much carbon (CO<sub>2</sub>e) is emitted per kilowatt-hour (kWh) of electricity consumed. The standard unit of carbon intensity is gCO<sub>2</sub>e/kWh, or grams of carbon per kilowatt hour.
 
-If your computer is plugged directly into a wind farm, its electricity would have a carbon intensity of 0 gCO<sub>2</sub>e/kWh since a wind farm emits no carbon to produce that electricity. However, most people can't plug directly into wind farms; instead, they plug into power grids supplied with electricity from various sources.
+If your computer is plugged directly into a wind farm, its electricity would have a carbon intensity of 0 gCO<sub>2</sub>e/kWh since a wind farm emits no carbon to produce that electricity. However, most people cannot plug directly into wind farms; instead, they plug into power grids supplied with electricity from various sources.
 
 :::::::::::::::::::::::::::::::::::::::: callout
 
@@ -68,7 +68,7 @@ Similarly, this table compares values across the world in 2023 (ref: [Our World 
 | Japan | 485 |
 | Australia | 549 |
 
-Carbon intensity also changes over time due to the inherent variability of renewable energy caused by the unpredictability of weather conditions. For example, when it's cloudy or the wind isn't blowing, carbon intensity increases since more of the electricity in your mix comes from sources that emit carbon.
+Carbon intensity also changes over time due to the inherent variability of renewable energy caused by the unpredictability of weather conditions. For example, when it is cloudy or the wind is not blowing, carbon intensity increases since more of the electricity in your mix comes from sources that emit carbon.
 
 ![Diagram illustrating change in carbon intensity over time due to changes in atmospheric conditions](./fig/08_variability_CI.png "Diagram illustrating change in carbon intensity over time due to changes in atmospheric conditions")
 
@@ -168,7 +168,7 @@ Using electricity when the carbon intensity is low is the best way to ensure inv
 
 ![Image of transition from high-carbon to low-carbon energy sources](./fig/13_carbon_aware.png "Image of transition from high-carbon to low-carbon energy sources")
 
-There is a global transformation happening right now. All around the world, electricity grids are changing from primarily burning fossil fuels to sourcing energy from lower carbon sources like wind and solar. This is one of our best hopes for meeting our global reduction targets. As green users of HPC, let's see some of the ways we can help accelerate that transition.
+There is a global transformation happening right now. All around the world, electricity grids are changing from primarily burning fossil fuels to sourcing energy from lower carbon sources like wind and solar. This is one of our best hopes for meeting our global reduction targets. As green users of HPC systems, let's see some of the ways we can help accelerate that transition.
 
 The primary driver for the transition is economic rather than any sustainability target. Renewables are winning because they are cheaper and getting even more affordable over time. So, to help accelerate the transition, we need to make renewable plants more profitable and fossil fuel plants less profitable. The best way to do that is to use more electricity when it's coming from lower-carbon sources like renewables and less electricity when it's coming from higher-carbon sources.
 
@@ -226,7 +226,7 @@ A third example is progressive enhancement with the web. The web experience impr
 
 Demand shaping is related to a broader concept in sustainability, which is to reduce consumption. We can achieve a lot by becoming more efficient with resources, but we also need to consume less at some point.
 
-As green users of HPC, we would consider cancelling or reducing the power intensity of our workflow when the carbon intensity is high instead of demand shifting - reducing the energy demands of our work.
+As green users of HPC systems, we would consider cancelling or reducing the power intensity of our workflow when the carbon intensity is high instead of demand shifting - reducing the energy demands of our work.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
