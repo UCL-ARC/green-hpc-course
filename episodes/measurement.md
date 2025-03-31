@@ -38,9 +38,9 @@ The GHG protocol divides emissions into three scopes:
    + **Upstream Scope 3 Emissions**: Includes all emissions from an organisation's supply chain, e.g. emissions from manufacturing and shipping a product
    + **Downstream Scope 3 Emissions**: Emissions resulting from the use of a product, e.g. the electricity customers may consume when using your product or waste output from the product
 
-Scope 3, sometimes referred to as value chain emissions, is the most significant source of emissions and the most complex to calculate for many organisations. These encompass the full range of activities needed to create a product or service, from conception to distribution. In the case of a laptop, for example, every raw material used in its production emits carbon when being extracted and processed (part of the upstream scope 3 emissions). Value chain emissions also include emissions from the use of the laptop, meaning the emissions from the energy used to power the laptop after it has been sold to a customer (part of downstream scope 3 emissions).
+Scope 3, sometimes referred to as value chain emissions, is often the most significant source of emissions and the most complex to calculate for many organisations. These encompass the full range of activities needed to create a product or service, from conception to distribution. In the case of a laptop, for example, every raw material used in its production emits carbon when being extracted and processed (part of the upstream scope 3 emissions). Value chain emissions also include emissions from the use of the laptop, meaning the emissions from the energy used to power the laptop after it has been sold to a customer (part of downstream scope 3 emissions).
 
-Through this approach, it's possible to sum up all the GHG emissions from every organization and person in the world and reach a global total.
+Through this approach, it's possible to sum up all the GHG emissions from every organisation and person in the world and reach a global total.
 
 ### What scope does my application fall into?
 
@@ -50,7 +50,7 @@ We have already seen how the GHG protocol asks us to bucket emissions from HPC s
 
 ## Exercise: What scope for HPC emissions?
 
-Throughout this course we have spoken about emissions from two different sources associated with our use of HPC: emissions from the electricity used to run our models/simulations on HPC systems and embodied emissions from the HPC system hardware. Given the definitions of scope 1-3 emissions given above, what scope do you think these two different sources of HPC system use emissions fall into?
+Throughout this lesson we have spoken about emissions from two different sources associated with our use of HPC: emissions from the electricity used to run our models/simulations on HPC systems and embodied emissions from the HPC system hardware. Given the definitions of scope 1-3 emissions given above, what scope do you think these two different sources of HPC system use emissions fall into?
 
 :::::::::::::::  solution
 
@@ -68,9 +68,7 @@ Throughout this course we have spoken about emissions from two different sources
 
 ## HPC electricity: Scope 2 or Downstream Scope 3?
 
-Whether the emissions from electricity use on HPC systems are Downstream Scope 3 or Scope 2 really depends on who is computing the emissions and for what purpose. From the viewpoint of the hardware vendor who sells and manufactures the HPC system, the electricity use falls into Downstream Scope 3 emissions but for operators and users of the HPC system they would classified as Scope 2 emissions. As we are approaching this subject as users of HPC systems we will always classify the emissions from our electricity use on HPC systems as Scope 2.
-
-In short, Downstream Scope 3 emissions are not usually relevant for use of HPC systems as this part of the emissions is reported in the Scope 2 emissions.
+Whether the emissions from electricity use on HPC systems are Downstream Scope 3 or Scope 2 really depends on who is computing the emissions and for what purpose. From the viewpoint of the hardware vendor who sells and manufactures the HPC system, the electricity use falls into Downstream Scope 3 emissions but for operators and users of the HPC system they would classified as Scope 2 emissions. As we are approaching this subject as buyers, operators and users of HPC systems we will always classify the emissions from our electricity use on HPC systems as Scope 2.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -85,7 +83,7 @@ HPC-E = (E * I) + M
 ```
 
 - `E` = Energy consumed by HPC use (in kWh)
-- `I` = Location-based marginal carbon intensity (in kgCO<sub>2</sub>/kWh)
+- `I` = Location-based carbon intensity (in kgCO<sub>2</sub>/kWh)
 - `M` = Embodied emissions 
 
 You can calculate this on a per job basis or for a larger grouping of HPC use - even for a full lifetime of an HPC service.
@@ -94,11 +92,11 @@ You can calculate this on a per job basis or for a larger grouping of HPC use - 
 
 ## Include failed jobs and jobs that did not produce useful output
 
-While it can be tempting to only include the use of HPC that produced useful output in our emissions calculations this should be avoided. The true amount of emissions includes **all** of our HPC system use to get us to the results we use and so failed jobs (due to errors) or calculations that did not produce useful output must be included. On the positive side, one of the ways we can reduce our emissions from use of HPC systems is to be more careful and eliminate emissions arising from these types of non-productive jobs.
+While it can be tempting to only include the use of HPC that produced useful output in our emissions calculations, this should be avoided. The true amount of emissions includes **all** of our HPC system use to get us to the results we use and so failed jobs (due to errors) or calculations that did not produce useful output must be included. On the positive side, one of the ways we can reduce our emissions from use of HPC systems is to be more careful and eliminate emissions arising from these types of non-productive jobs.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Instead of bucketing the carbon emissions of HPC use into scopes 1-3, it buckets them into **operational emissions** (carbon emissions from the electricity required for your HPC use, represented by `E * I`) and **embodied emissions** (carbon emissions from the physical HPC system components, represented by `M`).
+Instead of bucketing the carbon emissions of HPC use into scopes 1-3, this calculation buckets them into **operational emissions** (carbon emissions from the electricity required for your HPC use, represented by `E * I`) and **embodied emissions** (carbon emissions from the physical HPC system components, represented by `M`).
 
 Follow these steps to calculate your HPC emissions. 
 
@@ -111,7 +109,7 @@ Follow these steps to calculate your HPC emissions.
 
 Many HPC systems now provide energy use data for jobs run on the system. If this is the case, you can use these as the starting point for calculating your energy use of HPC resources. If this is not available, then you may need to estimate the energy use of your use of resources from component power draw. Even if you have energy use data available this may only cover energy use of compute nodes (or even processors on compute nodes) so you do typically have to do some estimation of power draw of other components to know how much extra energy to add on to include them in your calculation.
 
-If you are really lucky, the HPC system staff will have done this calculation for you. As has been done for the UK National Supercomputing Service, ARCHER2: [Estimating emissions from ARCHER2](https://docs.archer2.ac.uk/user-guide/energy/#scope-2-emissions)
+If you are really lucky, the HPC system staff will have done this calculation for you. As has been done for the UK National Supercomputing Service, ARCHER2: [Estimating emissions from ARCHER2](https://docs.archer2.ac.uk/user-guide/energy/#scope-2-emissions).
 
 We will cover two different ways to estimate the power draw of HPC systems which can then be used to compute energy use.
 
@@ -128,7 +126,7 @@ The methodologies outlined below all assume the compute nodes are heterogeneous.
 
 #### a. Using total power draw
 
-One of the simplest ways to estimate your energy use is to use the total power draw of the HPC system and divide it by the number of components to get a mean power draw per component that can be used to estimate energy use. For example, if the total power draw of the system is 250 kW and it contains 512 GPU, then the mean power draw per GPU is `250 kW / 512 GPU = 0.488 kW/GPU`. This, in turn, means the energy used for 12 hours use of 2 GPU is `12 hours * 2 GPU * 0.488 kW/GPU = 11.7 kWh`.
+One of the simplest ways to estimate your energy use is to use the total power draw of the HPC system and divide it by the number of components to get a mean power draw per component that can be used to estimate energy use. For example, if the total power draw of the system is 250 kW and it contains 512 GPU, then the mean power draw per GPU is `250 kW / 512 GPU = 0.488 kW/GPU`. This, in turn, means the energy used for 12 hours use of 2 GPU is estimated by `12 hours * 2 GPU * 0.488 kW/GPU = 11.7 kWh`.
 
 You should use the component that you measure resource use in to compute the mean power draw. For example. if your usage is measured in GPUh, then compute the power draw per GPU; if your usage is measured in nodeh, compute the power draw per node.
 
@@ -153,13 +151,13 @@ However, on ARCHER2 we also have the total compute node energy use available per
 
 #### Add in energy from plant overheads
 
-As well as the energy used by the system itself, there is also the energy used by the plant that supplies power and cooling to the HPC system. Different data centres have different sizes of overheads and this is given by PUE (Power Use Efficiency). For example, a PUE of 1.25 indicates that an additional 25% energy use is added on top of the system energy use to account for the plant. 
+As well as the energy used by the system itself, there is also the energy used by the plant that supplies power and cooling to the HPC system. Different data centres have different sizes of overheads and this is given by PUE (Power Use Efficiency) which we met earlier in this lesson. For example, a PUE of 1.25 indicates that an additional 25% energy use is added on top of the system energy use to account for the plant. 
 
-The PUE will vary with outside weather conditions at the data centre. For the ARCHER2 example, PUE is typically less than 10% so, s a conservative estimate, they add an additional 10% energy use to the total to account for plant overheads. 
+The PUE will vary with outside weather conditions at the data centre. For the ARCHER2 example, PUE is typically less than 10% so, as a conservative estimate, they add an additional 10% energy use to the total to account for plant overheads. 
 
 So, for the ARCHER2 example, the process for computing your total energy use becomes:
 
-- Measure total energy use from all jobs run
+- Measure total compute node energy use from all jobs run via node counters
 - Add 15% extra energy to cover energy use from other components
 - Add another 10% energy use top of this new total to cover plant overheads
 
@@ -189,7 +187,7 @@ use are captured in the Scope 2 emissions estimates.
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Calculating the embodied emissions can be more difficult than the operational emissions from energy 
-consumption as it can be more difficult to get information on embodied emissions associated with HPC hardware. You may, of course, be lucky and the HPC system you are using could already provide estimates of the 
+consumption as it can be more difficult to get information on embodied emissions associated with HPC system hardware. You may, of course, be lucky and the HPC system you are using could already provide estimates of the 
 embodied emissions which you can use!
 
 If you need to estimate this yourself, the major contributors to embodied emissions are likely to be:
@@ -203,7 +201,7 @@ may need to be taken into account. As a rule of thumb, you should look at the HP
 components there are lots of and use that as the starting place. Complex components (such as nodes, storage
 and switches) are likely to have much higher embodied emissions than simpler components (pumps, fans, cables etc.).
 
-As an example, here is how we have estimated embodied emissions for ARCHER2:
+As an example, here is how the embodied emissions for ARCHER2 have been estimated:
 
 | Component | Count | Estimated kgCO<sub>2</sub>e per unit | Estimated kgCO<sub>2</sub>e | % Total Scope 3 | References |
 |---|--:|--:|--:|--:|---|
@@ -217,7 +215,7 @@ As an example, here is how we have estimated embodied emissions for ARCHER2:
 References:
 
 1. [IRISCAST Final Report](https://doi.org/10.5281/zenodo.7692451)
-2. Estimate taken from IBM z16™ multi frame 24-port Ethernet Switch Product Carbon Footprint
+2. Estimate taken from IBM z16(TM) multi frame 24-port Ethernet Switch Product Carbon Footprint
 3. [Tannu and Nair, 2023](https://arxiv.org/abs/2207.10793)
 
 Note that there is a large amount of uncertainty for Scope 3 emissions due to lack of high quality embodied
@@ -231,7 +229,7 @@ change the fraction of emissions attributed to the compute nodes.
 ## Other embodied emissions sources
 
 We have not included embodied emissions associated with the data centre buildings and plant in the
-analysis above. [The IRISCAST report](https://doi.org/10.5281/zenodo.7692450) mentioned above provides
+analysis above. [The IRISCAST report](https://doi.org/10.5281/zenodo.7692450) provides
 an evaluation of these values. While the total embodied emissions can be high for these items, their
 long lifespan means that their contribution to the embodied emissions during the lifespan of a particular
 HPC system are generally much less significant than the embodied emissions from the HPC system hardware
@@ -262,7 +260,7 @@ use of HPC.
 ## `E * I` on a per job basis
 
 Rather than computing total energy use and then using an aggregate value for the carbon intensity, it may
-make more sense to compute `E * I` on a per-job basis using the carbon intensity value at the job time.
+make more sense to compute `E * I` on a per-job basis using the carbon intensity value at the job time. This is the approach used in the tools available on ARCHER2 for estimating emissions.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -320,17 +318,17 @@ from the Green Software Foundation.
 
 We now describe a methodology (the HPC Carbon Intensity specification, HPC-CI) to calculate your emissions from HPC system use and to encourage action towards eliminating emissions.
 
-It is not a replacement for the GHG protocol, but an additional metric that helps you understand how your HPC system use can be measured in terms of carbon emissions so they can make more informed decisions. While the GHG protocol calculates the **total emissions**, the HPC-CI is about calculating the **rate of emissions**. In automotive terms, HPC-CI is more like a miles per gallon measurement and the GHG protocol is more like the total carbon footprint of a car manufacturer and all their cars they produce every year.
+It is not a replacement for the GHG protocol, but an additional metric that helps you understand how your HPC system use can be measured in terms of carbon emissions so you can make more informed decisions. While the GHG protocol and the HPC-E calculates the **total emissions**, the HPC-CI is about calculating the **rate of emissions**. In automotive terms, HPC-CI is more like a miles per gallon measurement and the GHG protocol/HPC-E is more like the total carbon footprint of a car manufacturer and all their cars they produce every year.
 
 An important thing to note is that it is not possible to reduce your HPC-CI rate by purchasing offsets in the form of neutralisations, compensations, or by offsetting electricity in the form of renewable energy credits (we will cover this in more detail in the next section of the workshop). This means that HPC system use that makes no effort toward reducing emissions but spends money on carbon credits cannot reduce the associated HPC-CI rate.
 
 Offsets are an essential component of any climate strategy; however, offsets are not eliminations and therefore are not included in the HPC-CI metric.
 
-If you make your HPC use more **energy efficient, hardware efficient**, or **carbon aware**, your HPC-CI rate will decrease. The only way to reduce your rate is to invest time or resources into one of those three principles. As such, adopting the HPC-CI metric for your HPC use, will drive investment into one of the three pillars of green HPC use.
+If you make your HPC use more **energy efficient**, **hardware efficient**, or **carbon aware**, your HPC-CI rate will decrease. The only way to reduce your rate is to invest time or resources into one of those three principles. As such, adopting the HPC-CI metric for your HPC use, will drive investment into one of the three pillars of green HPC use.
 
 ## The HPC-CI equation
 
-The equation to calculate an HPC-CI rate is simple and very closely related to the calculation of total emissions presented above:
+The equation to calculate an HPC-CI rate is simple and very closely related to the calculation of total emissions (HPC-E) presented above:
 
 ```
 HPC-CI = [(E * I) + M] per R
@@ -341,9 +339,9 @@ HPC-CI = [(E * I) + M] per R
 - `M` = Embodied emissions 
 - `R` = Functional unit (e.g. iterations, simulated time, calculation cycles, research papers published, cost)
 
-This yields an emissions rate in carbon emissions per functional unit (`HPC-E per R`), e.g. kgCO2e/iteration.
+This yields an emissions rate in carbon emissions per functional unit (`HPC-E per R`), e.g. kgCO<sub>2</sub>e/iteration.
 
-The steps to calculate your HPC-CI score are the similar as calculating your emissions described above with additional steps to produce the rate. Steps 1-4 are identical the methodology described above:
+The steps to calculate your HPC-CI score are the same as calculating your total emissions (HPC-E) described above with additional steps to produce the rate. Steps 1-4 are identical to the HPC-E methodology described above:
 
 1. Gather your energy use
 2. Determine the carbon intensity at the location of the HPC system you are using
@@ -359,9 +357,9 @@ according to the chosen functional unit. The specification currently does not pr
 functional unit and you are free to pick whichever best describes the output from your use of HPC
 systems. For example, this could be a metric from the software you use (ns simulated, number of
 years simulated, iterations) or a metric tied to research progress (number of compounds modelled,
-data points analysed). There may also be ideas in literature related to your research area of 
-what a good choice may be. You may want to trial different functional units to see which one works
-best for your work.
+data points analysed, papers published). There may also be ideas in literature related to your
+work area of what a good choice may be. You may want to trial different functional units to see
+which one works best for your work.
 
 As a concrete example, imagine that you are simulating the dynamics of a biomolecular system
 (using software such as GROMACS, Amber or NAMD) then you could well chose the number of ns 
@@ -373,7 +371,7 @@ contexts.
 
 ### 6. Calculate HPC-CI rate
 
-Now you have both the total emisssions for your use of HPC systems and the number of functional 
+Now you have both the total emissions for your use of HPC systems and the number of functional 
 units arising from the same use of HPC systems you can calculate the HPC-CI by dividing the 
 total emissions by the total number of functional units.
 
@@ -429,7 +427,7 @@ ideally, eliminated.
 
 - The GHG protocol is a metric for measuring an organisation's total carbon emissions and is used by organisations all over the world.
 - The GHG protocol puts carbon emissions into three scopes. Scope 3, also known as value chain emissions, refers to the emissions from organisations that supply others in a chain. In this way, one organisation's scope 1 and 2 will sum up into another organization's scope 3.
-- You can use the GHG protocol to estimate your emissions from HPC system use but it requires access to good quality information from the HPC systems you are using.
+- You can use the GHG protocol to estimate your emissions from HPC system use but it requires access to reasonable quality information from the HPC systems you are using.
 - The HPC-CI is a metric designed specifically to calculate emissions from HPC systems and is a rate rather than a total. This can be used to measure improvements in emissions efficiency and drive reductions in emissions.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
