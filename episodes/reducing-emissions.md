@@ -178,7 +178,7 @@ To solve this problem, a renewable plant sells two things. The first is its elec
 
 If you want to be 100% matched by renewable energy and are on the grid, the solution is to buy enough RECs to cover the amount of electricity you consume. For instance, if you consume 100 kWh of electricity every day, then to be 100% matched by renewables, you buy 100 RECs.
 
-When organizations set 100% renewable targets purchasing RECs on the market is the solution they often employ to meet their commitments.
+When organisations set 100% renewable targets purchasing RECs on the market is the solution they often employ to meet their commitments.
 
 #### PPAs
 
@@ -196,7 +196,7 @@ When it comes to 100% renewable claims, the critical question is, what is the gr
 
 #### Daily vs hourly matching
 
-Imagine an organization has a demand curve like this, each blue square represents 1kWh:
+Imagine an organisation has a demand curve like this, each blue square represents 1kWh:
 
 ![Demand curve for electricity use](./fig/29_daily_consumption.png "Demand curve for electricity use")
 
@@ -238,7 +238,7 @@ While we cover strategies for reducing emissions from (roughly) a constant amoun
 
 > "We seem to need reminding that computing is not exempt from having to drastically reduce emissions. Instead of assuming computing can innovate the path to a greater future, the bravest and most heroic action the computing sector could take is to show restraint and leadership, ..."
 >
-> Bran Knowles et al. [Our House Is On Fire: The climate emergency and computing’s responsibility.](https://dl.acm.org/doi/pdf/10.1145/3503916)
+> Bran Knowles et al. [Our House Is On Fire: The climate emergency and computing's responsibility.](https://dl.acm.org/doi/pdf/10.1145/3503916)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -251,6 +251,8 @@ Before we delve into different approaches for different components of the HPC-CI
 - Ensure that the jobs you are running will produce useful/significant output even if they run correctly - do not run calculations/jobs without a clear understanding of what they add to the research project.
 - Carefully test input files and job scripts with small/short jobs before running at large scale to reduce the likelihood of wasted emissions.
 - Consider if you can achieve the same project goals with fewer jobs/calculations. For example, optimise the sampling choices when exploring parameter spaces.
+
+Similarly, for people involved in operating and procuring HPC systems, they need to work to ensure that users on the system have the best opportunity to do useful work and reduce wastage, for example by high quality documentation and training and a service design that supports users in making the most of their resources.
 
 Other strategies for improving the HPC-CI metric and, so, reducing emissions depend on whether the dominant component is operational emissions (i.e. emissions from energy use) or the embodied emissions. If the components are evenly balanced then you should look at options from both sections.
 
