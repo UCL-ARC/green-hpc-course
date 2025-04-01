@@ -288,7 +288,7 @@ location with a carbon intensity of 40 gCO<sub>2</sub>e/kWh.
 
 ## Solution
 
-1. The scope 2 emissions from energy use by the project are given by `E * I`, the energy used multiplied by the carbon intensity of the electricity supply. In this case, this is given by `3,542,000 kWh x 0.040 kgCO2e/kWh = 14,170 kgCO2e`.
+1. The scope 2 emissions from energy use by the project are given by `E * I`, the energy used multiplied by the carbon intensity of the electricity supply. In this case, this is given by `3,542,000 kWh x 0.040 kgCO2e/kWh = 141,700 kgCO2e`.
 
 2. The scope 3 emissions rate per GPUh is the total scope 3 emissions for the service divided by number of GPUh available over the lifetime of the service.
    1. The total GPUh over the service lifetime is estimated by `7 years x 365 days x 24 hours x 1000 nodes x 8 GPU per node = 490,560,000 GPUh`.
@@ -296,7 +296,7 @@ location with a carbon intensity of 40 gCO<sub>2</sub>e/kWh.
 
 3. The scope 3 emissions for the project use is the number of GPUh used multiplied by the scope 3 emissions per GPUh: `1,100 GPUh * 0.013 kgCO2e/GPUh = 14.3 kgCO2e`
 
-4. Total emissions are scope 2 + scope 3 emissions: `14,170 kgCO2e + 14.3 kgCO2e = 14,184 kgCO2e`
+4. Total emissions are scope 2 + scope 3 emissions: `141,700 kgCO2e + 14.3 kgCO2e = 141,714 kgCO2e`
 
 5. Scope 2 emissions (from electricity use) heavily dominate the emissions in this example.
 
