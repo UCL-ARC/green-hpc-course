@@ -31,9 +31,9 @@ After completing this lesson you should:
 
 ## Location and timings
 
-- Date: 1 Apr 2025
+- Date: 13 May 2025
 - Time: 10:00-15:30 BST
-- Location: Online
+- Location: [G.03, Bayes Centre, University of Edinburgh](https://www.archer2.ac.uk/training/locations/epcc.html)
 - Instructor: Andy Turner, EPCC
 
 ## Schedule
@@ -55,7 +55,7 @@ After completing this lesson you should:
 
 ## Registration
 
-- [Registration on ARCHER2 website](https://www.archer2.ac.uk/training/courses/250401-green-computing/)
+- [Registration on ARCHER2 website](https://www.archer2.ac.uk/training/courses/250513-green-computing/)
 
 
 :::::::::::::::::::::::::::::::::::::: callout
