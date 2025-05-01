@@ -120,7 +120,7 @@ b. Use the per-component power draw of the system
 
 ## Heterogeneous systems
 
-The methodologies outlined below all assume the compute nodes are heterogeneous. What do you do if this is not the case and some nodes on the system have GPU and others do not, for example? In this case, you should try, as much as possible, to treat each homogeneous partition as its own smaller HPC system to help calculate energy use.
+The methodologies outlined below all assume the compute nodes are homogeneous. What do you do if this is not the case and some nodes on the system have GPU and others do not, for example? In this case, you should try, as much as possible, to treat each homogeneous partition as its own smaller HPC system to help calculate energy use.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
