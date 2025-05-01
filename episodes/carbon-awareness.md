@@ -203,6 +203,12 @@ Some of the large technology companies have recognised the importance of carbon 
 - **Google Carbon Aware Data Centers** - Google launched a project to [make some of the cloud workloads carbon aware](https://blog.google/outreach-initiatives/sustainability/carbon-aware-computing-location/). They created models to predict tomorrow's carbon intensity and workload. They then shaped large-scale workloads so more would happen when and where the carbon intensity is lowest, but in such a way that they could still handle the expected load.
 - **Microsoft Carbon Aware Windows** - [Microsoft announced a project to make Windows 11 more sustainable](https://www.techradar.com/news/windows-11-is-getting-an-eco-friendly-update-but-could-microsoft-do-more). Initially, this means running Windows updates when the carbon intensity is lower.
 
+::: tip
+
+To be able to take advantage of temporal shifting on HPC systems typically requires support for such approaches in the configuration of the job scheduling system and or policies of the service you are using. While this is not widespread at the moment, more and more services are looking at ways to enable this. We will think about and mention concrete actions and approaches to this below.
+
+:::
+
 ### Demand shaping
 
 Demand shifting is the strategy of moving computation to regions or times when the carbon intensity is lowest. Demand shaping is a similar strategy. However, instead of moving demand to a different region or time, we shape our computation to match the existing supply.
