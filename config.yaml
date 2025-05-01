@@ -69,8 +69,8 @@ emails: ['a.turner@epcc.ed.ac.uk']
 episodes: 
 - introduction.md
 - carbon-efficiency.md
-- morning-break.md
 - energy-efficiency.md
+- morning-break.md
 - carbon-awareness.md
 - hardware-efficiency.md
 - lunch-break.md

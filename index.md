@@ -79,7 +79,7 @@ Anyone involved in using or delivering HPC resources - a user, a developer of so
 
 ## Prerequisites
 
-There are no prerequisites for this lesson.
+Attendees should familiarise themselves with the key concepts below before attending the workshop.
   
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
