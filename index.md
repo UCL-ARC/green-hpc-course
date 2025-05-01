@@ -70,7 +70,7 @@ course developed by the [Green Software Foundation](https://greensoftware.founda
 
 ## Target audience
 
-This lesson is aimed at all stakeholders in HPC use (e.g. researchers, RSEs, funders). No knowledge of environmental sustainability principles is assumed. 
+Anyone involved in using or delivering HPC resources - a user, a developer of software for use on HPC, an HPC service operator or those involved in procuring HPC systems. By attending this course, you will be able to better understand the effect of HPC systems on carbon emissions, where it fits with emissions from other activities and what concrete actions that can be taken to reduce emissions and the size of the impact from these reductions. No knowledge of environmental sustainability principles is assumed. 
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::

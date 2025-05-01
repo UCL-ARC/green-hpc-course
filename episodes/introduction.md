@@ -1,72 +1,44 @@
 ---
 title: Introduction
-teaching: 20
+teaching: 10
 exercises: 5
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Define green software use on HPC systems
+- Define green HPC system use
 - Appreciate emissions from HPC in the wider context of other research activities
-- Understand that research and use of HPC can also have positive emissions impacts
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What is green software use and what does it mean for me as a user of HPC?
+- What is green HPC system use and how can we approach it?
 - What research activities produce carbon emissions?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## What is green software?
+## What is green HPC system use?
 
-Green software is an emerging discipline at the intersection of climate science, software design, electricity markets, hardware, and data center design.
-
-Green software use is carbon-efficient software use, meaning it emits the least carbon possible. Only three activities reduce the carbon emissions of software; energy efficiency, carbon awareness, and hardware efficiency.
+Green HPC system use is carbon-efficient HPC system use, meaning it emits the least carbon possible. Only three activities reduce the carbon emissions associated with HPC system use: energy efficiency, carbon awareness, and hardware efficiency.
 
 This workshop will explain all of these concepts, how to apply them to use cases on high-performance computing (HPC) systems and how to measure them, as well as some of the international guidelines and organisations that guide and monitor this space.
 
 ![Diagram illustrating three activities that can reduce carbon emissions from software use](./fig/01_carbon_efficiency.png "image_tooltip")
 
-## Who is this aimed at?
 
-Anyone involved in using or delivering HPC resources - a user, a developer of software for use on HPC, an HPC service operator or those involved in procuring HPC systems. By studying these principles, you will be able to better understand the effect of HPC systems on carbon emissions, where it fits with emissions from other activities and what concrete actions that can be taken to reduce emissions and the size of the impact from these reductions.
+## How to understand green HPC system use
 
-## History of green software engineering
-
-In 2019 the original eight principles of green software engineering were released. This 2022 update of the principles took on feedback received over the years, merging some principles and adding a new one regarding understanding climate commitments. The principles as they are written are aimed primarily at software engineers but they are more broadly applicable to anyone making use of digital infrastructure. In this course we specifically look at how they can be applied to use of HPC resources.
-
-## How to understand green software on HPC
-
-In this workshop, we cover the covers 6 key areas of green use of HPC (based on the principles of green software engineering):
+In this workshop, we cover the covers 6 key areas of green use of HPC systems (based on the principles of green software engineering):
 
 1. **Carbon Efficiency**: Emit the least amount of carbon possible.
 2. **Energy Efficiency**: Use the least amount of energy possible.
 3. **Carbon Awareness**: Do more when the electricity is cleaner and do less when the electricity is dirtier.
 4. **Hardware Efficiency**: Use the least amount of embodied carbon possible.
-5. **Measurement**: What you can't measure, you can't improve.
-6. **Climate Commitments**: Understand the exact mechanism of carbon reduction.
+5. **Measurement**: What you cannot measure, you cannot improve.
+6. **Reducing Emissions**: Understand mechanisms of carbon reduction.
 
 Each of these episodes will introduce some new concepts and explain in detail why they are important in terms of the climate, and how you can apply them on HPC systems. We will use the [ARCHER2 UK National Supercomputing Serivce](https://www.archer2.ac.uk) to provide concrete examples of how the principles can be applied.
-
-:::::::::::::::::::::::::::::::::::::::: callout
-
-## Principles, Patterns, and Practices.
-
-Above, we described the **principles** of green software, a core set of competencies needed to define, build and run green software. To support software engineers in this area, The Green Software Foundation has developed a catalogue of *green software patterns*. While not specific to use of HPC and aimed at software developers rather than users, they provide interesting information on how particular software types and their use can be made more environmentally sustainable.
-
-A green software [**pattern**](https://patterns.greensoftware.foundation/) is a specific example of how to apply one or more principles in a real-world example. Whereas principles describe the theory that underpins green software, patterns are the practical advice software practitioners can use in their software applications today. Patterns are vendor-neutral.
-
-A green software **practice** is a pattern applied to a specific vendor's product and informs practitioners about how to use that product in a more sustainable way. 
-
-Practices should refer to patterns that should refer to principles.
-
-The green software foundation publishes a [catalog of vendor-neutral green software patterns](https://patterns.greensoftware.foundation/) across various categories.
- 
-![Diagram illustrating green software principles, patterns, and practices](./fig/GSF_Principles_Patterns_Practices_v2.png "Green Software Principles, Patterns, and Practices")
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Other work activities
 
@@ -112,12 +84,12 @@ In fact, **all** activities that we undertake as part of our work (and personal 
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- This course covers green software principles applied to HPC system use
+- This course covers green HPC system use, in particular
 - **Carbon Efficiency**: Emit the least amount of carbon possible.
 - **Energy Efficiency**: Use the least amount of energy possible.
 - **Carbon Awareness**: Do more when the electricity is cleaner and do less when the electricity is dirtier.
 - **Hardware Efficiency**: Use the least amount of embodied carbon possible.
-- **Measurement**: What you can't measure, you can't improve.
-- **Climate Commitments**: Understand the exact mechanism of carbon reduction.
+- **Measurement**: What you cannot measure, you cannot improve.
+- **Reducing Emissions**: Understand mechanisms of carbon reduction.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
