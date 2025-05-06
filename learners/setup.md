@@ -48,7 +48,16 @@ We will always emit carbon through our activities, but being carbon efficient me
 
 ## History of green software engineering
 
-In 2019 the original eight principles of green software engineering were released. This 2022 update of the principles took on feedback received over the years, merging some principles and adding a new one regarding understanding climate commitments. The principles as they are written are aimed primarily at software engineers but they are more broadly applicable to anyone making use of digital infrastructure. In this course we specifically look at how they can be applied to use of HPC resources.
+In 2019 the original eight principles of green software engineering were released. The 2022 update of the principles took on feedback received over the years, merging some principles and adding a new one regarding understanding climate commitments. The principles as they are written are aimed primarily at software engineers but they are more broadly applicable to anyone making use of digital infrastructure. In this lesson we specifically look at how they can be applied to use of HPC resources. The principles are:
+
+1. **Carbon Efficiency**: Emit the least amount of carbon possible.
+2. **Energy Efficiency**: Use the least amount of energy possible.
+3. **Carbon Awareness**: Do more when the electricity is cleaner and do less when the electricity is dirtier.
+4. **Hardware Efficiency**: Use the least amount of embodied carbon possible.
+5. **Measurement**: What you cannot measure, you cannot improve.
+6. **Climate Commitments:** Understand the exact mechanism of carbon reduction.
+
+These principles were originally described by the [Green Software Foundation](https://greensoftware.foundation/).
 
 ## Principles, Patterns, and Practices.
 
