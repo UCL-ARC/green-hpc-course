@@ -16,6 +16,7 @@ exercises: 0
 
 - What does 100% renewable energy actually mean?
 - How do we claim 100% renewable energy on a power grid with mixed energy sources?
+- What impact do different renewable energy matching strategies make?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -87,6 +88,9 @@ One example of a behavior change is shifting compute to a time when more renewab
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- 
+- "Powered by" 100% renewable energy means that renewable energy sources are directly connected to the HPC system.
+- "Matched by" 100% renewable energy means that the electricity for the HPC system is purchased from the grid along with renewable energy certificates to the same capacity as the usage.
+- When electricity is "matched by" 100% renewable energy the matching interval has a large impact on how it drives transition to green energy. The term "carbon free energy" is used to quantify how well we are matched on a 24/7 basis.
+- Large power purchase agreements (PPA) can be designed to incentivise the transition to green energy.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::

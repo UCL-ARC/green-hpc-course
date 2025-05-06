@@ -41,17 +41,17 @@ After completing this lesson you should:
 | Time | Episode |
 |-----:|---------|
 | 10:00 | Introduction |
-| 10:25 | Carbon efficiency |
-| 11:00 | Morning break |
-| 11:15 | Energy efficiency |
-| 11:45 | Carbon awareness |
-| 12:20 | Hardware efficiency |
-| 12:40 | Lunch |
-| 13:25 | Measurement |
-| 14:25 | Afternoon break |
-| 14:40 | Reducing emissions |
-| 15:25 | Next steps |
-| 15:35 | End |
+| 10:15 | Carbon efficiency |
+| 10:35 | Energy efficiency |
+| 11:05 | Morning break |
+| 11:20 | Carbon awareness |
+| 11:55 | Hardware efficiency |
+| 12:15 | Lunch |
+| 13:00 | Measurement |
+| 14:00 | Afternoon break |
+| 14:15 | Reducing emissions |
+| 15:00 | Next steps |
+| 15:30 | End |
 
 ## Registration
 
