@@ -44,18 +44,22 @@ After completing this lesson you should:
 | 10:15 | Carbon efficiency |
 | 10:35 | Energy efficiency |
 | 11:05 | Morning break |
-| 11:20 | Carbon awareness |
+| 11:25 | Carbon awareness |
 | 11:55 | Hardware efficiency |
 | 12:15 | Lunch |
 | 13:00 | Measurement |
 | 14:00 | Afternoon break |
-| 14:15 | Reducing emissions |
+| 14:20 | Reducing emissions |
 | 15:00 | Next steps |
 | 15:30 | End |
 
 ## Registration
 
 - [Registration on ARCHER2 website](https://www.archer2.ac.uk/training/courses/250513-green-computing/)
+
+## Catering
+
+No catering is provided at this event. Local organisors will be on hand to suggest locations for refreshments and lunch.
 
 
 :::::::::::::::::::::::::::::::::::::: callout
