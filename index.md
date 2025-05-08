@@ -59,7 +59,7 @@ After completing this lesson you should:
 
 ## Catering
 
-No catering is provided at this event. Local organisors will be on hand to suggest locations for refreshments and lunch.
+Refereshements are provided for the the morning and afternoon breaks. Lunch is not provided. Local organisors will be on hand to suggest locations for lunch.
 
 
 :::::::::::::::::::::::::::::::::::::: callout
