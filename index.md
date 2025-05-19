@@ -31,9 +31,9 @@ After completing this lesson you should:
 
 ## Location and timings
 
-- Date: 13 May 2025
+- Date: 2 July 2025
 - Time: 10:00-15:30 BST
-- Location: [G.03, Bayes Centre, University of Edinburgh](https://www.archer2.ac.uk/training/locations/epcc.html)
+- Location: G15 Chandler House, UCL, London, UK
 - Instructor: Andy Turner, EPCC
 
 ## Schedule
@@ -59,7 +59,7 @@ After completing this lesson you should:
 
 ## Catering
 
-Refereshements are provided for the the morning and afternoon breaks. Lunch is not provided. Local organisors will be on hand to suggest locations for lunch.
+No refreshments or lunch are provided. Local organisors will be on hand to suggest locations.
 
 
 :::::::::::::::::::::::::::::::::::::: callout
