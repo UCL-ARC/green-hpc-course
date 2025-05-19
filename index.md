@@ -55,7 +55,7 @@ After completing this lesson you should:
 
 ## Registration
 
-- [Registration on ARCHER2 website](https://www.archer2.ac.uk/training/courses/250513-green-computing/)
+- [Registration on ARCHER2 website](https://www.archer2.ac.uk/training/courses/250702-green-computing/)
 
 ## Catering
 
