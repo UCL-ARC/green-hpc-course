@@ -27,7 +27,7 @@ life_cycle: 'stable'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/EPCCed/2025-05-13_GreenHPC_Edinburgh'
+source: 'https://github.com/EPCCed/2025-07-02_GreenHPC_UCL'
 
 # Default branch of your lesson
 branch: 'main'
@@ -37,9 +37,9 @@ contact: 'a.turner@epcc.ed.ac.uk'
 
 layout: workshop
 
-startdate: 2025-04-01
-enddate: 2025-04-01
-humandate: 1 Apr 2025
+startdate: 2025-07-02
+enddate: 2025-07-02
+humandate: 2 July 2025
 humantime: 10:00 - 15:30 BST
 emails: ['a.turner@epcc.ed.ac.uk']
 
