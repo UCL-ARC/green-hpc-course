@@ -269,17 +269,17 @@ make more sense to compute `E * I` on a per-job basis using the carbon intensity
 ## Exercise: Computing total emissions from HPC system use
 
 You are using (or running) a GPU-based HPC service and a particular project has used the
-following amounts of resource over 3 months
+following amounts of resource:
 
-- 1,100 GPUh
-- 3,542,000 kWh
+- 120,000 GPUh
+- 72,000,000 kWh
 
 The total embodied emissions for the service are 6,500,000 kgCO<sub>2</sub>e, the service lifetime 
-is 7 years and there are 1000 compute nodes each with 8 GPU. The service is hosted in a
-location with a carbon intensity of 40 gCO<sub>2</sub>e/kWh.
+is 5 years and there are 1000 compute nodes each with 4 GPU. The service is hosted in a
+location with a carbon intensity of 20 gCO<sub>2</sub>e/kWh.
 
 1. Compute the scope 2 emissions for the project use
-2. Compute the scope 3 emissions rate in kgCO2e/GPUh
+2. Compute the scope 3 emissions rate in kgCO<sub>2</sub>e/GPUh
 3. Compute the scope 3 emissions for the project use
 4. Compute the total emissions for the project use
 5. Do scope 2 or scope 3 emissions dominate or are they evenly matched?
@@ -288,15 +288,15 @@ location with a carbon intensity of 40 gCO<sub>2</sub>e/kWh.
 
 ## Solution
 
-1. The scope 2 emissions from energy use by the project are given by `E * I`, the energy used multiplied by the carbon intensity of the electricity supply. In this case, this is given by `3,542,000 kWh x 0.040 kgCO2e/kWh = 141,700 kgCO2e`.
+1. The scope 2 emissions from energy use by the project are given by `E * I`, the energy used multiplied by the carbon intensity of the electricity supply. In this case, this is given by `72,000,000 kWh x 0.020 kgCO2e/kWh = 1,440,000 kgCO2e`.
 
 2. The scope 3 emissions rate per GPUh is the total scope 3 emissions for the service divided by number of GPUh available over the lifetime of the service.
-   1. The total GPUh over the service lifetime is estimated by `7 years x 365 days x 24 hours x 1000 nodes x 8 GPU per node = 490,560,000 GPUh`.
-   2. The scope 3 emissions rate is given by `6,500,000 kgCO2e / 490,560,000 GPUh = 0.013 kgCO2e/GPUh`
+   1. The total GPUh over the service lifetime is estimated by `5 years x 365 days x 24 hours x 1000 nodes x 4 GPU per node = 4,204,800,000 GPUh`.
+   2. The scope 3 emissions rate is given by `6,500,000 kgCO2e / 490,560,000 GPUh = 0.0015 kgCO2e/GPUh`
 
-3. The scope 3 emissions for the project use is the number of GPUh used multiplied by the scope 3 emissions per GPUh: `1,100 GPUh * 0.013 kgCO2e/GPUh = 14.3 kgCO2e`
+3. The scope 3 emissions for the project use is the number of GPUh used multiplied by the scope 3 emissions per GPUh: `120,000 GPUh * 0.0015 kgCO2e/GPUh = 185.5 kgCO2e`
 
-4. Total emissions are scope 2 + scope 3 emissions: `141,700 kgCO2e + 14.3 kgCO2e = 141,714 kgCO2e`
+4. Total emissions are scope 2 + scope 3 emissions: `1,440,000 kgCO2e + 185.5 kgCO2e = 1,440,185.5 kgCO2e`
 
 5. Scope 2 emissions (from electricity use) heavily dominate the emissions in this example.
 
