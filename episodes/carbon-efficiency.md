@@ -50,9 +50,9 @@ You may have come up with sources such as:
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Exercise: Positive emissions impacts
+## Exercise: Positive carbon impacts
 
-Write down the outcomes or activities that you do as part of your research or work that could be produce positive carbon emissions. Once you have them written down, can you rank them in order of what you think the largest source of emissions will be to the smallest? Can you think of any way in which you might go about quantifying this positive impact so it could be included in a carbon audit of your work?
+Write down the outcomes or activities that you do as part of your research or work that could be produce positive carbon impacts. Once you have them written down, can you rank them in order of what you think the largest source of emissions will be to the smallest? Can you think of any way in which you might go about quantifying this positive impact so it could be included in a carbon audit of your work?
 
 :::::::::::::::  solution
 
@@ -73,7 +73,7 @@ For example, attending this workshop may empower you to go away and take some ac
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Positive emissions impacts
+### Positive carbon impacts
 
 As well as reducing emissions from our use of HPC systems there are typically other sources of positive carbon emissions impact associated with HPC 
 
