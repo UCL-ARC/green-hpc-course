@@ -38,7 +38,7 @@ In this workshop, we cover the covers 6 key areas of green use of HPC systems (b
 5. **Measurement**: What you cannot measure, you cannot improve.
 6. **Reducing Emissions**: Understand mechanisms of carbon reduction.
 
-Each of these episodes will introduce some new concepts and explain in detail why they are important in terms of the climate, and how you can apply them on HPC systems. We will use the [ARCHER2 UK National Supercomputing Serivce](https://www.archer2.ac.uk) to provide concrete examples of how the principles can be applied.
+Each of these episodes will introduce some new concepts and explain in detail why they are important in terms of the climate, and how you can apply them on HPC systems. We will use [Young (tier 2 HPC cluster)](https://www.rc.ucl.ac.uk/docs/Clusters/Young/) to provide concrete examples of how the principles can be applied.
 
 ## Other work activities
 

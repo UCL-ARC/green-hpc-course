@@ -10,7 +10,7 @@ sustainable way. This lesson will give you the ability to understand emissions a
 use of HPC system and how to quantify them. We will use practical examples and real data from
 an existing HPC facility to illustrate the concepts.
 
-We use the [UK National Supercomputing Service, ARCHER2](https://www.archer2.ac.uk) as an 
+We use the [Young (compute cluster for the UK National Tier 2 High Performance Computing Hub in Materials and Molecular Modelling)](https://www.rc.ucl.ac.uk/docs/Clusters/Young/) as an 
 example throughout this lesson but the principles and learning should be applicable to 
 any HPC system.
 
@@ -27,14 +27,6 @@ After completing this lesson you should:
   in these frameworks map onto HPC
 - Gain practical advice on how you can measure and improve the carbon efficiency of your use of
   HPC
-
-
-## Location and timings
-
-- Date: 2 July 2025
-- Time: 10:00-15:30 BST
-- Location: G15 Chandler House, UCL, London, UK
-- Instructor: Andy Turner, EPCC
 
 ## Schedule
 
@@ -53,16 +45,10 @@ After completing this lesson you should:
 | 15:00 | Next steps |
 | 15:30 | End |
 
-## Registration
-
-- [Registration on ARCHER2 website](https://www.archer2.ac.uk/training/courses/250702-green-computing/)
-
-## Catering
-
-No refreshments or lunch are provided. Local organisors will be on hand to suggest locations.
-
 
 :::::::::::::::::::::::::::::::::::::: callout
+
+## Green Software Practitioner
 
 This workshop is based on and builds on the material in the [Green Software Practitioner](https://learn.greensoftware.foundation/)
 course developed by the [Green Software Foundation](https://greensoftware.foundation/).
