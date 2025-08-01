@@ -48,3 +48,9 @@ _site
 /Gemfile.lock
 vendor
 .bundle
+
+# pixi environments
+.pixi
+*.egg-info
+pixi.toml
+pixi.lock
