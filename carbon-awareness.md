@@ -146,7 +146,7 @@ When the demand for electricity goes up, utilities need to increase the supply t
 
 1. **Buy more energy from renewable sources that are currently being curtailed**
 
-![Diagram illustrating increase in demand from renewable sources](./fig/10_marginal_CI.png "Diagram illustrating increase in demand from renewable sources")
+![Diagram illustrating increase in demand from renewable sources](./fig/11_marginal_CI.png "Diagram illustrating increase in demand from renewable sources")
 
 If you are curtailing, it means you have excess energy you could dispatch. Renewable energy is already the cheapest, so curtailed renewable energy will be the cheapest dispatchable energy source. Renewable plants will then sell the energy they would have had to curtail.
 
