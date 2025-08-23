@@ -365,7 +365,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Measurement</h1>
-        <p>Last updated on 2025-08-01 |
+        <p>Last updated on 2025-08-23 |
 
         <a href="https://github.com/EPCCed/2025-07-02_GreenHPC_UCL/edit/main/episodes/measurement.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -493,7 +493,7 @@ different sources of HPC system use emissions fall into?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul><li>Emissions from electricity used: these would be classified as Scope
 2 emissions</li>
@@ -634,67 +634,24 @@ energy use from counters on the compute nodes (as is sometimes possible
 on HPC systems) then this approach allows you to estimate additional
 energy overheads that need to be added on in addition to the measured
 power draw.</p>
-<p>We illustrate this approach using the estimates for the ARCHER2 HPC
-system:</p>
-<table style="width:100%;" class="table"><colgroup><col width="16%"><col width="16%"><col width="16%"><col width="16%"><col width="16%"><col width="16%"></colgroup><thead><tr class="header"><th>Component</th>
-<th align="right">Count</th>
-<th align="right">Loaded power draw per unit (kW)</th>
-<th align="right">Loaded power draw (kW)</th>
-<th align="right">% Total</th>
-<th>Notes</th>
-</tr></thead><tbody><tr class="odd"><td>Compute nodes</td>
-<td align="right">5,860 nodes</td>
-<td align="right">0.41</td>
-<td align="right">2,400</td>
-<td align="right">85%</td>
-<td>Measured by on system counters</td>
-</tr><tr class="even"><td>Interconnect switches</td>
-<td align="right">768 switches</td>
-<td align="right">0.24</td>
-<td align="right">240</td>
-<td align="right">9%</td>
-<td>Measured by on system counters</td>
-</tr><tr class="odd"><td>Lustre storage</td>
-<td align="right">5 file systems</td>
-<td align="right">8</td>
-<td align="right">40</td>
-<td align="right">1%</td>
-<td>Estimate from vendor</td>
-</tr><tr class="even"><td>NFS storage</td>
-<td align="right">4 file systems</td>
-<td align="right">8</td>
-<td align="right">32</td>
-<td align="right">1%</td>
-<td>Estimate from vendor</td>
-</tr><tr class="odd"><td>Coolant distribution units</td>
-<td align="right">6 CDU</td>
-<td align="right">16</td>
-<td align="right">96</td>
-<td align="right">3%</td>
-<td>Estimate from vendor</td>
-</tr><tr class="even"><td>Total</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">2,808</td>
-<td align="right">99%</td>
-<td></td>
-</tr></tbody></table><p>In this case, we have a mix of data measured on the system (power
-draw of the compute nodes and power draw of the interconnect switches)
-and estimates from the vendor (storage systems and CDU). Here, the total
-power draw is estimated at 2,808 kW, there are 5,860 compute nodes and
-the unit of resource is nodeh so we can calculate the mean per node
-power draw (including all the components in the table) in the same way
-as we did for method (a) with
-<code>2,808 kW / 5,860 nodes = 0.480 kW/node</code> and use this to
-compute energy consumption based on how many nodeh we use.</p>
-<p>However, on ARCHER2 we also have the total compute node energy use
-available per job to users from the Slurm scheduler. The table above
-shows that the compute nodes contribute around 85% of the total power
-draw of ARCHER2 (of the components included) so an alternative method to
-compute the energy use is to use the measurement from the scheduler and
-add an additional 15% to cover the energy used by other components. This
-is, in fact, the methodology used for computing per job energy use on
-ARCHER2.</p>
+<p>We use the total power draw of the system to estimate anaegy usage
+for Young (where an extra 10% is added for energy usage of interconnect
+switched and coolant unites):</p>
+<table class="table"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup><thead><tr class="header"><th>Component</th>
+<th align="right">Energy usage from 04-07-2024 to 04-07-2025 (kWh)</th>
+<th>% Total</th>
+</tr></thead><tbody><tr class="odd"><td>Compute and storage nodes</td>
+<td align="right">1,533,082.28</td>
+<td>90%</td>
+</tr><tr class="even"><td>Interconnect switches and Coolant units</td>
+<td align="right">153,308.2</td>
+<td>10%</td>
+</tr><tr class="odd"><td>Total</td>
+<td align="right">1,686,390.48</td>
+<td>100%</td>
+</tr></tbody></table><p>Systems like ARCHER2 also have the total compute node energy use
+available per job to users from the Slurm scheduler, but Young does not
+have it as of now.</p>
 </div>
 <div class="section level4">
 <h4 id="add-in-energy-from-plant-overheads">Add in energy from plant overheads<a class="anchor" aria-label="anchor" href="#add-in-energy-from-plant-overheads"></a></h4>
@@ -706,17 +663,19 @@ lesson. For example, a PUE of 1.25 indicates that an additional 25%
 energy use is added on top of the system energy use to account for the
 plant.</p>
 <p>The PUE will vary with outside weather conditions at the data centre.
-For the ARCHER2 example, PUE is typically less than 10% so, as a
-conservative estimate, they add an additional 10% energy use to the
-total to account for plant overheads.</p>
-<p>So, for the ARCHER2 example, the process for computing your total
+For the Young example, PUE is typically less than 50-60% so, as an
+estimate, we add an additional 60% energy use to the total to account
+for plant overheads.</p>
+<p>So, for the Young example, the process for computing your total
 energy use becomes:</p>
 <ul><li>Measure total compute node energy use from all jobs run via node
 counters</li>
-<li>Add 15% extra energy to cover energy use from other components</li>
-<li>Add another 10% energy use top of this new total to cover plant
+<li>Add 10% extra energy to cover energy use from other components</li>
+<li>Add another 60% energy use top of this new total to cover plant
 overheads</li>
-</ul></div>
+</ul><p>Hence, the total energy usage of Young from 04-07-2024 to 04-07-2025
+comes out to be 2,698,224.76 kWh.</p>
+</div>
 </div>
 <div class="section level3">
 <h3 id="determine-local-carbon-intensity">2. Determine local carbon intensity<a class="anchor" aria-label="anchor" href="#determine-local-carbon-intensity"></a></h3>
@@ -753,7 +712,10 @@ ordered from lowest to highest.</p>
 </tr><tr class="odd"><td>High</td>
 <td>S.W. England, S. Wales,</td>
 <td align="right">242 - 255</td>
-</tr></tbody></table></div>
+</tr></tbody></table><p>Young is located in Torington place, and querying the carbon
+intensity API from 04-07-2024 to 04-07-2025 for the postcode WC1E gives
+us a value of 139.96 gCO2e/kWh.</p>
+</div>
 <div class="section level3">
 <h3 id="determine-embodied-emissions">3. Determine embodied emissions<a class="anchor" aria-label="anchor" href="#determine-embodied-emissions"></a></h3>
 <div id="upstream-scope-3-emissions" class="callout">
@@ -764,7 +726,7 @@ ordered from lowest to highest.</p>
 <div id="upstream-scope-3-emissions" class="callout-inner">
 <h3 class="callout-title">Upstream Scope 3 emissions</h3>
 <div class="callout-content">
-<p>Remember that we are considering only <em>upstream</em> Scope3
+<p>Remember that we are considering only <em>upstream</em> Scope 3
 emissions here. The emissions from electricity use are captured in the
 Scope 2 emissions estimates.</p>
 </div>
@@ -788,53 +750,125 @@ which components there are lots of and use that as the starting place.
 Complex components (such as nodes, storage and switches) are likely to
 have much higher embodied emissions than simpler components (pumps,
 fans, cables etc.).</p>
-<p>As an example, here is how the embodied emissions for ARCHER2 have
-been estimated:</p>
-<table style="width:100%;" class="table"><colgroup><col width="16%"><col width="16%"><col width="16%"><col width="16%"><col width="16%"><col width="16%"></colgroup><thead><tr class="header"><th>Component</th>
+<p>As an example, here is how the embodied emissions for Young have been
+estimated:</p>
+<table class="table"><colgroup><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"></colgroup><thead><tr class="header"><th>Component type</th>
 <th align="right">Count</th>
+<th align="right">Model</th>
+<th align="right">Vendor</th>
 <th align="right">Estimated kgCO<sub>2</sub>e per unit</th>
 <th align="right">Estimated kgCO<sub>2</sub>e</th>
-<th align="right">% Total Scope 3</th>
-<th>References</th>
+<th align="right">References</th>
+<th></th>
 </tr></thead><tbody><tr class="odd"><td>Compute nodes</td>
-<td align="right">5,860 nodes</td>
-<td align="right">1,100</td>
-<td align="right">6,400,000</td>
-<td align="right">84%</td>
-<td>(1)</td>
+<td align="right">32</td>
+<td align="right">Cray XD220v</td>
+<td align="right">HPE</td>
+<td align="right">1642</td>
+<td align="right">52,544</td>
+<td align="right">1</td>
+<td></td>
+</tr><tr class="even"><td>Compute nodes</td>
+<td align="right">11</td>
+<td align="right">ProLiant DL360 Gen10</td>
+<td align="right">HPE</td>
+<td align="right">1,616</td>
+<td align="right">17,776</td>
+<td align="right">2</td>
+<td></td>
+</tr><tr class="odd"><td>Compute nodes</td>
+<td align="right">8</td>
+<td align="right">ProLiant DL380 Gen10</td>
+<td align="right">HPE</td>
+<td align="right">1,668</td>
+<td align="right">13,344</td>
+<td align="right">3</td>
+<td></td>
+</tr><tr class="even"><td>Compute nodes</td>
+<td align="right">508</td>
+<td align="right">ProLiant XL170r Gen10</td>
+<td align="right">HPE</td>
+<td align="right">2,100</td>
+<td align="right">1,066,800</td>
+<td align="right">4</td>
+<td></td>
+</tr><tr class="odd"><td>Compute nodes</td>
+<td align="right">6</td>
+<td align="right">ProLiant XL675d Gen10 Plus</td>
+<td align="right">HPE</td>
+<td align="right">2,300</td>
+<td align="right">13,800</td>
+<td align="right">4</td>
+<td></td>
 </tr><tr class="even"><td>Interconnect switches</td>
-<td align="right">768 switches</td>
+<td align="right">22</td>
+<td align="right">OPA SWITCH</td>
+<td align="right">Generic</td>
 <td align="right">280</td>
-<td align="right">150,000</td>
-<td align="right">2%</td>
-<td>(2)</td>
-</tr><tr class="odd"><td>Lustre HDD</td>
-<td align="right">19,759,200 GB</td>
-<td align="right">0.02</td>
-<td align="right">400,000</td>
-<td align="right">6%</td>
-<td>(3)</td>
-</tr><tr class="even"><td>Lustre SSD</td>
-<td align="right">1,900,800 GB</td>
-<td align="right">0.16</td>
-<td align="right">300,000</td>
-<td align="right">4%</td>
-<td>(3)</td>
-</tr><tr class="odd"><td>NFS HDD</td>
-<td align="right">3,240,000 GB</td>
-<td align="right">0.02</td>
-<td align="right">70,000</td>
-<td align="right">1%</td>
-<td>(3)</td>
+<td align="right">6160</td>
+<td align="right">5</td>
+<td></td>
+</tr><tr class="odd"><td>Interconnect switches</td>
+<td align="right">2</td>
+<td align="right">Aruba 6300M</td>
+<td align="right">HPE</td>
+<td align="right">280</td>
+<td align="right">560</td>
+<td align="right">5</td>
+<td></td>
+</tr><tr class="even"><td>Interconnect switches</td>
+<td align="right">2</td>
+<td align="right">FlexFabric 5710 JL689A</td>
+<td align="right">HPE</td>
+<td align="right">280</td>
+<td align="right">560</td>
+<td align="right">5</td>
+<td></td>
+</tr><tr class="odd"><td>Interconnect switches</td>
+<td align="right">38</td>
+<td align="right">FlexNetwork 5510 JH146A</td>
+<td align="right">HPE</td>
+<td align="right">280</td>
+<td align="right">10640</td>
+<td align="right">5</td>
+<td></td>
 </tr><tr class="even"><td>Total</td>
 <td align="right"></td>
 <td align="right"></td>
-<td align="right">7,320,000</td>
-<td align="right">100%</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">1,182,184</td>
+<td align="right"></td>
 <td></td>
-</tr></tbody></table><p>References:</p>
-<ol style="list-style-type: decimal"><li><a href="https://doi.org/10.5281/zenodo.7692451" class="external-link">IRISCAST Final
-Report</a></li>
+</tr></tbody></table><table class="table"><colgroup><col width="20%"><col width="20%"><col width="20%"><col width="20%"><col width="20%"></colgroup><thead><tr class="header"><th>Component</th>
+<th align="right">Count</th>
+<th align="right">Estimated kgCO<sub>2</sub>e per unit</th>
+<th align="right">Estimated kgCO<sub>2</sub>e</th>
+<th>References</th>
+</tr></thead><tbody><tr class="odd"><td>HDD</td>
+<td align="right">2,000,000 GB</td>
+<td align="right">0.02</td>
+<td align="right">40,000</td>
+<td>6</td>
+</tr><tr class="even"><td>SSD</td>
+<td align="right">2,000 GB</td>
+<td align="right">0.16</td>
+<td align="right">320</td>
+<td>6</td>
+</tr><tr class="odd"><td>Total</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">40,320</td>
+<td></td>
+</tr></tbody></table><p>The total estimated emobodied emission comes out to be 1,222,504
+kgCO<sub>2</sub>e.</p>
+<p>References:</p>
+<ol style="list-style-type: decimal"><li>Calculated as an average of 2 and 3</li>
+<li><a href="https://www.hpe.com/psnow/doc/a00133636enw?jumpid=in_hpesitesearch" class="external-link">HPE
+product carbon footprint HPE ProLiant DL360 Gen10 Plus Server</a></li>
+<li><a href="https://www.hpe.com/psnow/doc/a50004545enw?jumpid=in_hpesitesearch" class="external-link">HPE
+product carbon footprint HPE ProLiant DL380 Gen10 Server</a></li>
+<li>Estimate taken from HPE’s carbon footprint of similar products</li>
 <li>Estimate taken from IBM z16(TM) multi frame 24-port Ethernet Switch
 Product Carbon Footprint</li>
 <li><a href="https://arxiv.org/abs/2207.10793" class="external-link">Tannu and Nair,
@@ -843,10 +877,10 @@ Product Carbon Footprint</li>
 emissions due to lack of high quality embodied emissions data. The
 number used for the compute node emissions is at the high end of
 estimated values for a CPU-only compute node and the actual value could
-be as much as 15% lower at around 900 kgCO<sub>2</sub>e/node. If the
-lower value is used, it reduces the overall estimated embodied emissions
-but does not significantly change the fraction of emissions attributed
-to the compute nodes.</p>
+be as low as 900 kgCO<sub>2</sub>e/node. If the lower value is used, it
+reduces the overall estimated embodied emissions but does not
+significantly change the fraction of emissions attributed to the compute
+nodes.</p>
 <div id="other-embodied-emissions-sources" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -881,6 +915,31 @@ use (<code>HPC-E</code>):</p>
 <pre><code><span><span class="va">HPC</span><span class="op">-</span><span class="va">E</span> <span class="op">=</span> <span class="op">(</span><span class="va">E</span> <span class="op">*</span> <span class="va">I</span><span class="op">)</span> <span class="op">+</span> <span class="va">M</span></span></code></pre>
 <p>we can plug the numbers in and come up with a value for the total
 emissions arising from our use of HPC.</p>
+<p>For Young, the total HPC emissions from 04-07-2024 to 04-07-2025 can
+be calculated as:</p>
+<pre><code>E * I = 2,698,224.76 kWh * 0.14 kgCO2e/kWh = 377,751.46 kgCO2e</code></pre>
+<pre><code>Amortised M = 1,222,504 kgCO2e / 5 years = 244,500.8 kgCO2e/year (assuming Young stays in operation for 5 years)</code></pre>
+<pre><code>HPC-E = (E * I) + M = 377,751.46 kgCO2e + 244,500.8 kgCO2e/year * 1 year = 622,252.26 kgCO2e for 1 year.</code></pre>
+<p>Once can see that ~60% of the emission is scope 2 emission and ~40%
+of it is scope 3 emission; hence, Young’s operational emission
+dominates. This means that we are getting the most out of our initial
+pollution (manufacturing), so now we should now try reducing or
+stabilising our operational emission (more on this in the next
+episode).</p>
+<p>Interestingly, UCL produced 49,176,099.46 kgCO<sub>2</sub>e scope 2
+emission in the academic years 2015/16 to 2023/24 according to (<a href="https://www.hesa.ac.uk/data-and-analysis/estates/environmental" class="external-link">HE
+Provider Data: Estates Management</a>), which is 6,147,012.43
+kgCO<sub>2</sub>e per year on an average. Therefore, Young’s scope 2
+emission accounts for ~10.12% of UCL’s scope 2 emission per year, which
+is a huge chunk.</p>
+<p>Similarly, UCL produced 162,005 kgCO<sub>2</sub>e scope 2 emission in
+the academic years 2015/16 to 2023/24, which is 20,250.625
+kgCO<sub>2</sub>e per year on an average. Therefore, Young’s scope 3
+emission is ~30.7 times UCL’s scope 3 emission per year. However, this
+number is very likely wrong as UCL does not include supply chain
+emission in its scope 3 emission (such as, the carbon emitted while
+procuring computer systems, construction of buildings (for instance, the
+entirety of UCL East campus), …).</p>
 <div id="e-i-on-a-per-job-basis" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -894,7 +953,8 @@ emissions arising from our use of HPC.</p>
 value for the carbon intensity, it may make more sense to compute
 <code>E * I</code> on a per-job basis using the carbon intensity value
 at the job time. This is the approach used in the tools available on
-ARCHER2 for estimating emissions.</p>
+ARCHER2 for estimating emissions, but this is not yet available on
+Young.</p>
 </div>
 </div>
 </div>
@@ -929,7 +989,7 @@ matched?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p>The scope 2 emissions from energy use by the project are given by
 <code>E * I</code>, the energy used multiplied by the carbon intensity
@@ -1083,7 +1143,7 @@ climate during that 3 month period using 1,100 GPUh of resource.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p>Given by:
 <code>14,184 kgCO2e / 3,680 simulated years = 3.85 kgCO2e/simulated year</code></p></li>
@@ -1197,9 +1257,9 @@ emissions.</li>
   "creativeWorkStatus": "active",
   "url": "https://EPCCed.github.io/2025-07-02_GreenHPC_UCL/instructor/measurement.html",
   "identifier": "https://EPCCed.github.io/2025-07-02_GreenHPC_UCL/instructor/measurement.html",
-  "dateCreated": "2025-08-01",
-  "dateModified": "2025-08-01",
-  "datePublished": "2025-08-19"
+  "dateCreated": "2025-08-23",
+  "dateModified": "2025-08-23",
+  "datePublished": "2025-08-23"
 }
 
   </script><script>
