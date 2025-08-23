@@ -134,32 +134,29 @@ You should use the component that you measure resource use in to compute the mea
 
 This approach requires more detailed information being available on the power draw of different components though measurement or from information from the vendors of the components. If you are getting your energy use from counters on the compute nodes (as is sometimes possible on HPC systems) then this approach allows you to estimate additional energy overheads that need to be added on in addition to the measured power draw.
 
-We illustrate this approach using the estimates for the ARCHER2 HPC system:
+We use the total power draw of the system to estimate anaegy usage for Young (where an extra 10% is added for energy usage of interconnect switched and coolant unites):
 
-| Component | Count | Loaded power draw per unit (kW)| Loaded power draw (kW) | % Total | Notes |
-|---|--:|--:|--:|--:|---|
-| Compute nodes | 5,860 nodes | 0.41 | 2,400 | 85% | Measured by on system counters |
-| Interconnect switches | 768 switches | 0.24 | 240 | 9% | Measured by on system counters |
-| Lustre storage | 5 file systems | 8 | 40 | 1% | Estimate from vendor |
-| NFS storage | 4 file systems | 8 | 32 | 1% | Estimate from vendor |
-| Coolant distribution units | 6 CDU | 16 | 96 | 3% | Estimate from vendor |
-| Total | | | 2,808 | 99% | |
+| Component | Energy usage from 04-07-2024 to 04-07-2025 (kWh) | % Total |
+|---|--:|---|
+| Compute and storage nodes | 1,533,082.28 | 90% |
+| Interconnect switches and Coolant units | 153,308.2|  10% |
+| Total | 1,686,390.48 | 100% |
 
-In this case, we have a mix of data measured on the system (power draw of the compute nodes and power draw of the interconnect switches) and estimates from the vendor (storage systems and CDU). Here, the total power draw is estimated at 2,808 kW, there are 5,860 compute nodes and the unit of resource is nodeh so we can calculate the mean per node power draw (including all the components in the table) in the same way as we did for method (a) with `2,808 kW / 5,860 nodes = 0.480 kW/node` and use this to compute energy consumption based on how many nodeh we use.
-
-However, on ARCHER2 we also have the total compute node energy use available per job to users from the Slurm scheduler. The table above shows that the compute nodes contribute around 85% of the total power draw of ARCHER2 (of the components included) so an alternative method to compute the energy use is to use the measurement from the scheduler and add an additional 15% to cover the energy used by other components. This is, in fact, the methodology used for computing per job energy use on ARCHER2.
+Systems like ARCHER2 also have the total compute node energy use available per job to users from the Slurm scheduler, but Young does not have it as of now.
 
 #### Add in energy from plant overheads
 
 As well as the energy used by the system itself, there is also the energy used by the plant that supplies power and cooling to the HPC system. Different data centres have different sizes of overheads and this is given by PUE (Power Use Efficiency) which we met earlier in this lesson. For example, a PUE of 1.25 indicates that an additional 25% energy use is added on top of the system energy use to account for the plant. 
 
-The PUE will vary with outside weather conditions at the data centre. For the ARCHER2 example, PUE is typically less than 10% so, as a conservative estimate, they add an additional 10% energy use to the total to account for plant overheads. 
+The PUE will vary with outside weather conditions at the data centre. For the Young example, PUE is typically less than 50-60% so, as an estimate, we add an additional 60% energy use to the total to account for plant overheads. 
 
-So, for the ARCHER2 example, the process for computing your total energy use becomes:
+So, for the Young example, the process for computing your total energy use becomes:
 
 - Measure total compute node energy use from all jobs run via node counters
-- Add 15% extra energy to cover energy use from other components
-- Add another 10% energy use top of this new total to cover plant overheads
+- Add 10% extra energy to cover energy use from other components
+- Add another 60% energy use top of this new total to cover plant overheads
+
+Hence, the total energy usage of Young from 04-07-2024 to 04-07-2025 comes out to be 2,698,224.76 kWh.
 
 ### 2. Determine local carbon intensity
 
@@ -175,13 +172,15 @@ As we saw earlier, for the UK, the carbon intensity is dependent on location and
 | High Medium | S. England, E. Midlands | 186 - 203 |
 | High | S.W. England, S. Wales, | 242 - 255 |
 
+Young is located in Torington place, and querying the carbon intensity API from 04-07-2024 to 04-07-2025 for the postcode WC1E gives us a value of 139.96 gCO2e/kWh.
+
 ### 3. Determine embodied emissions
 
 :::::::::::::::::::::::::::::::::::::::: callout
 
 ## Upstream Scope 3 emissions
 
-Remember that we are considering only *upstream* Scope3 emissions here. The emissions from electricity
+Remember that we are considering only *upstream* Scope 3 emissions here. The emissions from electricity
 use are captured in the Scope 2 emissions estimates.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -201,26 +200,41 @@ may need to be taken into account. As a rule of thumb, you should look at the HP
 components there are lots of and use that as the starting place. Complex components (such as nodes, storage
 and switches) are likely to have much higher embodied emissions than simpler components (pumps, fans, cables etc.).
 
-As an example, here is how the embodied emissions for ARCHER2 have been estimated:
+As an example, here is how the embodied emissions for Young have been estimated:
 
-| Component | Count | Estimated kgCO<sub>2</sub>e per unit | Estimated kgCO<sub>2</sub>e | % Total Scope 3 | References |
-|---|--:|--:|--:|--:|---|
-| Compute nodes | 5,860 nodes | 1,100 | 6,400,000 | 84% | (1) |
-| Interconnect switches | 768 switches | 280 | 150,000 | 2% | (2) |
-| Lustre HDD | 19,759,200 GB | 0.02 | 400,000 | 6% | (3) |
-| Lustre SSD | 1,900,800 GB | 0.16 | 300,000 | 4% | (3) |
-| NFS HDD | 3,240,000 GB | 0.02 | 70,000 | 1% | (3) |
-| Total | | | 7,320,000 | 100% | |
+| Component type | Count | Model | Vendor | Estimated kgCO<sub>2</sub>e per unit | Estimated kgCO<sub>2</sub>e | References |
+|---|--:|--:|--:|--:|--:|--:|---|
+| Compute nodes | 32 | Cray XD220v | HPE | 1642 | 52,544 | 1 |
+| Compute nodes | 11 | ProLiant DL360 Gen10 | HPE | 1,616 | 17,776 | 2 |
+| Compute nodes | 8 | ProLiant DL380 Gen10 | HPE | 1,668 | 13,344 | 3 |
+| Compute nodes | 508 | ProLiant XL170r Gen10 | HPE | 2,100 | 1,066,800 | 4 |
+| Compute nodes | 6 | ProLiant XL675d Gen10 Plus | HPE | 2,300 | 13,800 | 4 |
+| Interconnect switches | 22 | OPA SWITCH | Generic | 280 | 6160 | 5 |
+| Interconnect switches | 2 | Aruba 6300M | HPE | 280 | 560 | 5 |
+| Interconnect switches | 2 | FlexFabric 5710 JL689A | HPE | 280 | 560 | 5 |
+| Interconnect switches | 38 | FlexNetwork 5510 JH146A | HPE | 280 | 10640 | 5 |
+| Total | | | | | 1,182,184 | | |
+
+| Component | Count | Estimated kgCO<sub>2</sub>e per unit | Estimated kgCO<sub>2</sub>e | References |
+|---|--:|--:|--:|---|
+| HDD | 2,000,000 GB | 0.02 | 40,000 | 6 |
+| SSD | 2,000 GB | 0.16 | 320 | 6 |
+| Total | | | 40,320 | |
+
+The total estimated emobodied emission comes out to be 1,222,504 kgCO<sub>2</sub>e.
 
 References:
 
-1. [IRISCAST Final Report](https://doi.org/10.5281/zenodo.7692451)
-2. Estimate taken from IBM z16(TM) multi frame 24-port Ethernet Switch Product Carbon Footprint
-3. [Tannu and Nair, 2023](https://arxiv.org/abs/2207.10793)
+1. Calculated as an average of 2 and 3
+2. [HPE product carbon footprint HPE ProLiant DL360 Gen10 Plus Server](https://www.hpe.com/psnow/doc/a00133636enw?jumpid=in_hpesitesearch)
+3. [HPE product carbon footprint HPE ProLiant DL380 Gen10 Server](https://www.hpe.com/psnow/doc/a50004545enw?jumpid=in_hpesitesearch)
+4. Estimate taken from HPE's carbon footprint of similar products
+5. Estimate taken from IBM z16(TM) multi frame 24-port Ethernet Switch Product Carbon Footprint
+6. [Tannu and Nair, 2023](https://arxiv.org/abs/2207.10793)
 
 Note that there is a large amount of uncertainty for Scope 3 emissions due to lack of high quality embodied
 emissions data. The number used for the compute node emissions is at the high end of estimated values for a
-CPU-only compute node and the actual value could be as much as 15% lower at around 900 kgCO<sub>2</sub>e/node.
+CPU-only compute node and the actual value could be as low as 900 kgCO<sub>2</sub>e/node.
 If the lower value is used, it reduces the overall estimated embodied emissions but does not significantly
 change the fraction of emissions attributed to the compute nodes.
 
@@ -255,12 +269,32 @@ HPC-E = (E * I) + M
 we can plug the numbers in and come up with a value for the total emissions arising from our
 use of HPC.
 
+For Young, the total HPC emissions from 04-07-2024 to 04-07-2025 can be calculated as:
+
+```
+E * I = 2,698,224.76 kWh * 0.14 kgCO2e/kWh = 377,751.46 kgCO2e
+```
+
+```
+Amortised M = 1,222,504 kgCO2e / 5 years = 244,500.8 kgCO2e/year (assuming Young stays in operation for 5 years)
+```
+
+```
+HPC-E = (E * I) + M = 377,751.46 kgCO2e + 244,500.8 kgCO2e/year * 1 year = 622,252.26 kgCO2e for 1 year.
+```
+
+Once can see that ~60% of the emission is scope 2 emission and ~40% of it is scope 3 emission; hence, Young's operational emission dominates. This means that we are getting the most out of our initial pollution (manufacturing), so now we should now try reducing or stabilising our operational emission (more on this in the next episode).
+
+Interestingly, UCL produced 49,176,099.46 kgCO<sub>2</sub>e scope 2 emission in the academic years 2015/16 to 2023/24 according to ([HE Provider Data: Estates Management](https://www.hesa.ac.uk/data-and-analysis/estates/environmental)), which is 6,147,012.43 kgCO<sub>2</sub>e per year on an average. Therefore, Young’s scope 2 emission accounts for ~10.12% of UCL’s scope 2 emission per year, which is a huge chunk.
+
+Similarly, UCL produced 162,005 kgCO<sub>2</sub>e scope 2 emission in the academic years 2015/16 to 2023/24, which is 20,250.625 kgCO<sub>2</sub>e per year on an average. Therefore, Young’s scope 3 emission is ~30.7 times UCL’s scope 3 emission per year. However, this number is very likely wrong as UCL does not include supply chain emission in its scope 3 emission (such as, the carbon emitted while procuring computer systems, construction of buildings (for instance, the entirety of UCL East campus), …).
+
 :::::::::::::::::::::::::::::::::::::::: callout
 
 ## `E * I` on a per job basis
 
 Rather than computing total energy use and then using an aggregate value for the carbon intensity, it may
-make more sense to compute `E * I` on a per-job basis using the carbon intensity value at the job time. This is the approach used in the tools available on ARCHER2 for estimating emissions.
+make more sense to compute `E * I` on a per-job basis using the carbon intensity value at the job time. This is the approach used in the tools available on ARCHER2 for estimating emissions, but this is not yet available on Young.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
