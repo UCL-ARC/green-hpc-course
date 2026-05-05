@@ -490,7 +490,7 @@ different sources of HPC system use emissions fall into?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul><li>Emissions from electricity used: these would be classified as Scope
 2 emissions</li>
@@ -634,16 +634,16 @@ power draw.</p>
 <p>We use the total power draw of the system to estimate anaegy usage
 for Young (where an extra 10% is added for energy usage of interconnect
 switched and coolant unites):</p>
-<table class="table"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup><thead><tr class="header"><th>Component</th>
+<table class="table"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup><thead><tr><th>Component</th>
 <th align="right">Energy usage from 04-07-2024 to 04-07-2025 (kWh)</th>
 <th>% Total</th>
-</tr></thead><tbody><tr class="odd"><td>Compute and storage nodes</td>
+</tr></thead><tbody><tr><td>Compute and storage nodes</td>
 <td align="right">1,533,082.28</td>
 <td>90%</td>
-</tr><tr class="even"><td>Interconnect switches and Coolant units</td>
+</tr><tr><td>Interconnect switches and Coolant units</td>
 <td align="right">153,308.2</td>
 <td>10%</td>
-</tr><tr class="odd"><td>Total</td>
+</tr><tr><td>Total</td>
 <td align="right">1,686,390.48</td>
 <td>100%</td>
 </tr></tbody></table><p>Systems like ARCHER2 also have the total compute node energy use
@@ -691,22 +691,22 @@ value over a longer period. The aggregate value is a simpler choice for
 a first estimate. The table below shows the approximate average carbon
 intensities for the different regions of the UK national grid for 2024
 ordered from lowest to highest.</p>
-<table class="table"><colgroup><col width="13%"><col width="40%"><col width="46%"></colgroup><thead><tr class="header"><th>Type</th>
+<table class="table"><colgroup><col width="13%"><col width="40%"><col width="46%"></colgroup><thead><tr><th>Type</th>
 <th>Regions</th>
 <th align="right">Carbon Intensity (gCO<sub>2</sub>e/kWh)</th>
-</tr></thead><tbody><tr class="odd"><td>Low</td>
+</tr></thead><tbody><tr><td>Low</td>
 <td>N. Scotland, S. Scotland, N.E. England, N.W. England</td>
 <td align="right">22 - 48</td>
-</tr><tr class="even"><td>Low Medium</td>
+</tr><tr><td>Low Medium</td>
 <td>N. Wales</td>
 <td align="right">77</td>
-</tr><tr class="odd"><td>Medium</td>
+</tr><tr><td>Medium</td>
 <td>E. England, London, W. Midlands, S.E. England, Yorkshire</td>
 <td align="right">108 - 135</td>
-</tr><tr class="even"><td>High Medium</td>
+</tr><tr><td>High Medium</td>
 <td>S. England, E. Midlands</td>
 <td align="right">186 - 203</td>
-</tr><tr class="odd"><td>High</td>
+</tr><tr><td>High</td>
 <td>S.W. England, S. Wales,</td>
 <td align="right">242 - 255</td>
 </tr></tbody></table><p>Young is located in Torington place, and querying the carbon
@@ -749,7 +749,7 @@ have much higher embodied emissions than simpler components (pumps,
 fans, cables etc.).</p>
 <p>As an example, here is how the embodied emissions for Young have been
 estimated:</p>
-<table class="table"><colgroup><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"></colgroup><thead><tr class="header"><th>Component type</th>
+<table class="table"><colgroup><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"><col width="12%"></colgroup><thead><tr><th>Component type</th>
 <th align="right">Count</th>
 <th align="right">Model</th>
 <th align="right">Vendor</th>
@@ -757,7 +757,7 @@ estimated:</p>
 <th align="right">Estimated kgCO<sub>2</sub>e</th>
 <th align="right">References</th>
 <th></th>
-</tr></thead><tbody><tr class="odd"><td>Compute nodes</td>
+</tr></thead><tbody><tr><td>Compute nodes</td>
 <td align="right">32</td>
 <td align="right">Cray XD220v</td>
 <td align="right">HPE</td>
@@ -765,7 +765,7 @@ estimated:</p>
 <td align="right">52,544</td>
 <td align="right">1</td>
 <td></td>
-</tr><tr class="even"><td>Compute nodes</td>
+</tr><tr><td>Compute nodes</td>
 <td align="right">11</td>
 <td align="right">ProLiant DL360 Gen10</td>
 <td align="right">HPE</td>
@@ -773,7 +773,7 @@ estimated:</p>
 <td align="right">17,776</td>
 <td align="right">2</td>
 <td></td>
-</tr><tr class="odd"><td>Compute nodes</td>
+</tr><tr><td>Compute nodes</td>
 <td align="right">8</td>
 <td align="right">ProLiant DL380 Gen10</td>
 <td align="right">HPE</td>
@@ -781,7 +781,7 @@ estimated:</p>
 <td align="right">13,344</td>
 <td align="right">3</td>
 <td></td>
-</tr><tr class="even"><td>Compute nodes</td>
+</tr><tr><td>Compute nodes</td>
 <td align="right">508</td>
 <td align="right">ProLiant XL170r Gen10</td>
 <td align="right">HPE</td>
@@ -789,7 +789,7 @@ estimated:</p>
 <td align="right">1,066,800</td>
 <td align="right">4</td>
 <td></td>
-</tr><tr class="odd"><td>Compute nodes</td>
+</tr><tr><td>Compute nodes</td>
 <td align="right">6</td>
 <td align="right">ProLiant XL675d Gen10 Plus</td>
 <td align="right">HPE</td>
@@ -797,7 +797,7 @@ estimated:</p>
 <td align="right">13,800</td>
 <td align="right">4</td>
 <td></td>
-</tr><tr class="even"><td>Interconnect switches</td>
+</tr><tr><td>Interconnect switches</td>
 <td align="right">22</td>
 <td align="right">OPA SWITCH</td>
 <td align="right">Generic</td>
@@ -805,7 +805,7 @@ estimated:</p>
 <td align="right">6160</td>
 <td align="right">5</td>
 <td></td>
-</tr><tr class="odd"><td>Interconnect switches</td>
+</tr><tr><td>Interconnect switches</td>
 <td align="right">2</td>
 <td align="right">Aruba 6300M</td>
 <td align="right">HPE</td>
@@ -813,7 +813,7 @@ estimated:</p>
 <td align="right">560</td>
 <td align="right">5</td>
 <td></td>
-</tr><tr class="even"><td>Interconnect switches</td>
+</tr><tr><td>Interconnect switches</td>
 <td align="right">2</td>
 <td align="right">FlexFabric 5710 JL689A</td>
 <td align="right">HPE</td>
@@ -821,7 +821,7 @@ estimated:</p>
 <td align="right">560</td>
 <td align="right">5</td>
 <td></td>
-</tr><tr class="odd"><td>Interconnect switches</td>
+</tr><tr><td>Interconnect switches</td>
 <td align="right">38</td>
 <td align="right">FlexNetwork 5510 JH146A</td>
 <td align="right">HPE</td>
@@ -829,7 +829,7 @@ estimated:</p>
 <td align="right">10640</td>
 <td align="right">5</td>
 <td></td>
-</tr><tr class="even"><td>Total</td>
+</tr><tr><td>Total</td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
@@ -837,22 +837,22 @@ estimated:</p>
 <td align="right">1,182,184</td>
 <td align="right"></td>
 <td></td>
-</tr></tbody></table><table class="table"><colgroup><col width="20%"><col width="20%"><col width="20%"><col width="20%"><col width="20%"></colgroup><thead><tr class="header"><th>Component</th>
+</tr></tbody></table><table class="table"><colgroup><col width="20%"><col width="20%"><col width="20%"><col width="20%"><col width="20%"></colgroup><thead><tr><th>Component</th>
 <th align="right">Count</th>
 <th align="right">Estimated kgCO<sub>2</sub>e per unit</th>
 <th align="right">Estimated kgCO<sub>2</sub>e</th>
 <th>References</th>
-</tr></thead><tbody><tr class="odd"><td>HDD</td>
+</tr></thead><tbody><tr><td>HDD</td>
 <td align="right">2,000,000 GB</td>
 <td align="right">0.02</td>
 <td align="right">40,000</td>
 <td>6</td>
-</tr><tr class="even"><td>SSD</td>
+</tr><tr><td>SSD</td>
 <td align="right">2,000 GB</td>
 <td align="right">0.16</td>
 <td align="right">320</td>
 <td>6</td>
-</tr><tr class="odd"><td>Total</td>
+</tr><tr><td>Total</td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right">40,320</td>
@@ -986,7 +986,7 @@ matched?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p>The scope 2 emissions from energy use by the project are given by
 <code>E * I</code>, the energy used multiplied by the carbon intensity
@@ -1140,7 +1140,7 @@ climate during that 3 month period using 1,100 GPUh of resource.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p>Given by:
 <code>14,184 kgCO2e / 3,680 simulated years = 3.85 kgCO2e/simulated year</code></p></li>
@@ -1258,7 +1258,7 @@ emissions.</li>
   "identifier": "https://EPCCed.github.io/2025-07-02_GreenHPC_UCL/instructor/measurement.html",
   "dateCreated": "2025-08-23",
   "dateModified": "2025-08-23",
-  "datePublished": "2026-04-28"
+  "datePublished": "2026-05-05"
 }
 
   </script><script>
